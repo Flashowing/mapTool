@@ -6,7 +6,8 @@
 import 'cesium/Build/Cesium/Widgets/widgets.css'
 // import { Viewer } from 'Cesium'
 import { Viewer } from 'cesium'
-const Cesium = require('../../node_modules/cesium/Source/Cesium')
+// import * as Cesium from 'cesium'
+// const Cesium = require('../../node_modules/cesium/Source/Cesium')
 
 export default {
   name: 'CesiumContainer',
