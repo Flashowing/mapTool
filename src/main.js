@@ -6,6 +6,9 @@ import store from './store'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
+// eslint-disable-next-line no-unused-vars
+import * as Cesium from 'cesium'
+
 Vue.config.productionTip = false
 
 Vue.use(ElementUI)

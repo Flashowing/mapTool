@@ -52,6 +52,8 @@
 </template>
 
 <script>
+
+
 export default {
   name: 'DegreesToCartesian',
   data() {
