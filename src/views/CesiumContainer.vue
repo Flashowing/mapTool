@@ -11,6 +11,11 @@ import { Viewer } from 'cesium'
 
 export default {
   name: 'CesiumContainer',
+  data: function(){
+    return {
+      isFullScreen: false,
+    }
+  },
   mounted() {
     /* eslint no-new: */
     Cesium.Ion.defaultAccessToken =
@@ -33,6 +38,7 @@ export default {
       scene3DOnly: true // 如果设置为true，则所有几何图形以3D模式绘制以节约GPU资源
       // terrainProvider: Cesium.createWorldTerrain(),
     })
+    this.isFullscreen = true;
     console.log(Cesium)
     window._viewer = viewer
     var fullscreen = document.createElement('div') // 自定义全屏按钮只全屏canvas
@@ -130,6 +136,6 @@ export default {
 <style scoped>
 #cesiumContainer {
   width: 100%;
-  height: 100%;
+  height: 380px;
 }
 </style>
