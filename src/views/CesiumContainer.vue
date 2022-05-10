@@ -11,9 +11,9 @@ import { Viewer } from 'cesium'
 
 export default {
   name: 'CesiumContainer',
-  data: function(){
+  data: function () {
     return {
-      isFullScreen: false,
+      isFullScreen: false
     }
   },
   mounted() {
@@ -38,8 +38,7 @@ export default {
       scene3DOnly: true // 如果设置为true，则所有几何图形以3D模式绘制以节约GPU资源
       // terrainProvider: Cesium.createWorldTerrain(),
     })
-    this.isFullscreen = true;
-    console.log(Cesium)
+    this.isFullscreen = true
     window._viewer = viewer
     var fullscreen = document.createElement('div') // 自定义全屏按钮只全屏canvas
     fullscreen.style.position = 'absolute'

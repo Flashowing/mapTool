@@ -7,7 +7,7 @@ module.exports = {
   publicPath: './',
   assetsDir: './static',
   productionSourceMap: false,
-  lintOnSave: true, // 是否开启eslint
+  lintOnSave: false, // 是否开启eslint
   devServer: {
     open: true
   },

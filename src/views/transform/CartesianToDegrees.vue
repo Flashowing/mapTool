@@ -86,7 +86,7 @@ export default {
         let lon = Cesium.Math.toDegrees(cartographic.longitude);
         let lat = Cesium.Math.toDegrees(cartographic.latitude);
         let elev = cartographic.height;
-        this.result = lon + "," + lat + "," + elev;
+        this.result = lon + ',' + lat + ',' + elev;
         this.showCopy = true;
       } catch (e) {
         // console.log(e);
