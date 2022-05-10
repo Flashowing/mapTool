@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import CesiumContainer from '@/views/CesiumContainer.vue'
+import CesiumContainer from '@/views/transform/CesiumContainer.vue'
 console.log(CesiumContainer)
 Vue.use(VueRouter)
 
