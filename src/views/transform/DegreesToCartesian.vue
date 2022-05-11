@@ -34,10 +34,13 @@
         </tr>
         <tr>
           <td>
-<!--            <el-link id="copy-f3" class="copy-f3" v-clipboard:copy="result" v-clipboard:success="onCopy"-->
+<!--            <el-link id="copy-f3" class="copy-f3"  v-clipboard="() => result" v-clipboard:success="onCopy"-->
 <!--                     v-clipboard:error="onError" v-show="showCopy" :underline="false" type="primary"-->
 <!--                     icon="el-icon-document-copy">复制-->
 <!--            </el-link>-->
+            <el-link @click="onCopy" v-show="showCopy" type="primary"
+                     icon="el-icon-document-copy">复制
+            </el-link>
           </td>
         </tr>
         <tr>
@@ -61,6 +64,7 @@ export default {
       lon_input: '',
       lat_input: '',
       result: '',
+      resultCartesian3: '',
       showCopy: false
     }
   },
@@ -71,7 +75,8 @@ export default {
         var latitude = Number(this.lat_input)
         // eslint-disable-next-line no-undef
         const cartesian3 = Cesium.Cartesian3.fromDegrees(longitude, latitude)
-        this.result = cartesian3
+        this.result = 'Cartesian3' + JSON.stringify(cartesian3)
+        this.resultCartesian3 = cartesian3
         this.showCopy = true
       } catch (e) {
         console.log(e)
@@ -79,6 +84,7 @@ export default {
       }
     },
     onCopy: function () {
+      this.$clipboard(this.resultCartesian3.x + ',' + this.resultCartesian3.y + ',' + this.resultCartesian3.z)
       this.$message.success('复制成功')
     },
     onError: function () {

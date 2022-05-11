@@ -1,14 +1,58 @@
 <template>
-  <div id='cesiumContainer'></div>
+  <el-container>
+    <el-main>
+      <el-row>
+        <el-col :span='17' class='full-height'>
+          <div id='cesiumContainer'>
+            <div class='coordinate-tooltip' :style='{ left: coordinateTooltipX, top: coordinateTooltipY }'> {{ coordinate }}</div>
+          </div>
+        </el-col>
+        <el-col :span='7' class='full-height'>
+          <el-header><h1>地址</h1></el-header>
+          <div class='right-form'>
+            <el-form :label-position='labelPosition' :model='formLabelAlign'>
+              <el-form-item label='WGS84坐标'>
+                <el-input v-model='formLabelAlign.wgs84'><i slot='suffix'
+                                                            class='el-input__icon el-icon-document-copy'></i></el-input>
+              </el-form-item>
+              <el-form-item label='GCJ02坐标'>
+                <el-input v-model='formLabelAlign.gcj02'><i slot='suffix'
+                                                            class='el-input__icon el-icon-document-copy'></i></el-input>
+              </el-form-item>
+              <el-form-item label='百度坐标'>
+                <el-input v-model='formLabelAlign.bd'><i slot='suffix' class='el-input__icon el-icon-document-copy'></i>
+                </el-input>
+              </el-form-item>
+              <el-form-item label='地址'>
+                <el-input v-model='formLabelAlign.address'><i slot='suffix'
+                                                              class='el-input__icon el-icon-document-copy'></i>
+                </el-input>
+              </el-form-item>
+            </el-form>
+          </div>
+        </el-col>
+      </el-row>
+    </el-main>
+  </el-container>
 </template>
 
 <script>
 import { Viewer } from 'cesium'
 
 export default {
-  name: 'Home',
+  name: 'coordinatePickUp',
   data: function() {
     return {
+      labelPosition: 'top',
+      formLabelAlign: {
+        wgs84: '',
+        gcj02: '',
+        bd: '',
+        address: ''
+      },
+      coordinate: '',
+      coordinateTooltipX: 0,
+      coordinateTooltipY: 0,
       isFullScreen: false
     }
   },
@@ -124,14 +168,68 @@ export default {
       tileMatrixSetID: 'GoogleMapsCompatible',
       show: true
     }))
+
+    const handler = new Cesium.ScreenSpaceEventHandler(viewer.scene.canvas)
+    handler.setInputAction(function(event) {
+      let wp = event.endPosition
+      if (!Cesium.defined(wp)) {
+        return
+      }
+      let ray = viewer.scene.camera.getPickRay(wp)
+      if (!Cesium.defined(ray)) {
+        return
+      }
+      let cartesian = viewer.scene.globe.pick(ray, viewer.scene)
+      if (!Cesium.defined(cartesian)) {
+        return
+      }
+      if (cartesian) {
+        let cartographic = Cesium.Cartographic.fromCartesian(cartesian)
+        let longitude = Cesium.Math.toDegrees(cartographic.longitude).toFixed(6)
+        let latitude = Cesium.Math.toDegrees(cartographic.latitude).toFixed(6)
+        _this.coordinate = longitude + ',' + latitude
+        document.querySelector('.coordinate-tooltip').style.display = 'block'
+        _this.coordinateTooltipY = (wp.y + 15) + 'px'
+        _this.coordinateTooltipX = (wp.x + 15) + 'px'
+      }
+    }, Cesium.ScreenSpaceEventType.MOUSE_MOVE)
   }
 }
 </script>
 
 <style scoped>
+.el-row, el-col {
+  height: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
 #cesiumContainer {
   width: 100%;
   height: 100%;
   position: relative;
+  overflow: hidden;
+}
+
+.right-form {
+  padding: 0 20px;
+}
+
+.el-input__icon:hover {
+  cursor: pointer;
+  color: #5cb6ff;
+}
+
+.coordinate-tooltip {
+  position: absolute;
+  z-index: 1;
+  color: #FFF;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 14px;
+  background: rgba(0, 0, 0, 0.7);
+  pointer-events: none;
 }
 </style>

@@ -19,10 +19,18 @@ export default {
 
 <style scoped>
 .el-main {
-  background-color: #E9EEF3;
-  color: #333;
+  width: 1140px;
+  margin: 0 auto;
+  /*background-color: #E9EEF3;*/
+  /*color: #333;*/
   /*text-align: center;*/
   /*line-height: 160px;*/
+}
+
+@media (max-width: 1140px) {
+  .el-main {
+    width: 100%;
+  }
 }
 
 .header {

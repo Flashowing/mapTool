@@ -27,7 +27,7 @@
           <template slot='title'>工具</template>
           <el-menu-item index='2-1'><router-link to='/countScore'>业绩指标分值计算</router-link>
           </el-menu-item>
-          <el-menu-item index='2-2'>坐标拾取工具</el-menu-item>
+          <el-menu-item index='2-2'><router-link to='/coordinatePickUp'>坐标拾取工具</router-link></el-menu-item>
           <el-menu-item index='2-3'><router-link to='/coordTrans'>坐标转换工具</router-link></el-menu-item>
           <el-submenu index='2-4'>
             <template slot='title'>选项4</template>
@@ -71,6 +71,12 @@ export default {
   height: 100%;
   box-sizing: border-box;
   border-bottom: 1px solid #dcdfe6;
+}
+
+@media (max-width: 1140px) {
+  .container {
+    width: 100%;
+  }
 }
 
 .el-menu--horizontal > .el-menu-item {

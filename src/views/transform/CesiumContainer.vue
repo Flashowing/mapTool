@@ -1,5 +1,20 @@
 <template>
-  <div id="cesiumContainer"></div>
+  <div>
+    <div id='cesiumContainer'>
+      <div class='panel'>
+        <el-collapse v-model="activeNames" accordion>
+          <el-collapse-item title='坐标' name='1'>
+            <div>经度：{{ coords.longitude }}</div>
+            <div>纬度：{{ coords.latitude }}</div>
+            <div>高度：{{ coords.height }}</div>
+            <div>笛卡尔：{{ coords.cartesian3 }}</div>
+            <div>弧度：{{ coords.cartographic }}</div>
+          </el-collapse-item>
+        </el-collapse>
+      </div>
+      <div class='info'>视角高度：{{ listenInfo.cameraHeight }}米 经度：{{ listenInfo.longitude }} 纬度：{{ listenInfo.latitude }} 地形高度 {{ listenInfo.height }}</div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -11,15 +26,30 @@ import { Viewer } from 'cesium'
 
 export default {
   name: 'CesiumContainer',
-  data: function () {
+  data: function() {
     return {
-      isFullScreen: false
+      activeNames: ['1'],
+      isFullScreen: false,
+      coords: {
+        longitude: 0,
+        latitude: 0,
+        height: 0,
+        cartesian3: {},
+        cartographic: {}
+      },
+      listenInfo: {
+        cameraHeight: 0,
+        longitude: 0,
+        latitude: 0,
+        height: 0,
+      }
     }
   },
   mounted() {
+    let _this = this;
     /* eslint no-new: */
     Cesium.Ion.defaultAccessToken =
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI0YWJlYzNkNS0yY2M0LTQxZWQtOGZhNi05MjEzYmVmZGVkNTkiLCJpZCI6MzU1NTEsImlhdCI6MTYwNDYyNzY2NH0.JxhQQxEvJTrmeARILcywKaPoPEPjO1RlqL28CRjktx8';
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI0YWJlYzNkNS0yY2M0LTQxZWQtOGZhNi05MjEzYmVmZGVkNTkiLCJpZCI6MzU1NTEsImlhdCI6MTYwNDYyNzY2NH0.JxhQQxEvJTrmeARILcywKaPoPEPjO1RlqL28CRjktx8'
     // eslint-disable-next-line no-unused-vars
     const viewer = new Viewer('cesiumContainer', {
       homeButton: true, // 主页按钮
@@ -72,10 +102,10 @@ export default {
         roll: Cesium.Math.toRadians(0)
       },
       duration: 5, // 设置飞行持续时间，默认会根据距离来计算
-      complete: function () {
+      complete: function() {
         // 到达位置后执行的回调函数
       },
-      cancle: function () {
+      cancle: function() {
         // 如果取消飞行则会调用此函数
       },
       pitchAdjustHeight: -90, // 如果摄像机飞越高于该值，则调整俯仰俯仰的俯仰角度，并将地球保持在视口中。
@@ -127,6 +157,58 @@ export default {
       tileMatrixSetID: 'GoogleMapsCompatible',
       show: true
     }))
+
+    const handler = new Cesium.ScreenSpaceEventHandler(viewer.scene.canvas)
+    handler.setInputAction(function(event) {
+      var wp = event.position
+      if (!Cesium.defined(wp)) {
+        return
+      }
+      var ray = viewer.scene.camera.getPickRay(wp)
+      if (!Cesium.defined(ray)) {
+        return
+      }
+      var cartesian = viewer.scene.globe.pick(ray, viewer.scene)
+      if (!Cesium.defined(cartesian)) {
+        return
+      }
+      if (cartesian) {
+        var cartographic = Cesium.Cartographic.fromCartesian(cartesian)
+        _this.coords.longitude = Cesium.Math.toDegrees(cartographic.longitude)
+        _this.coords.latitude = Cesium.Math.toDegrees(cartographic.latitude)
+        _this.coords.height = viewer.scene.globe.getHeight(cartographic)
+        _this.coords.cartesian3 = cartesian
+        _this.coords.cartographic = cartographic
+      }
+    }, Cesium.ScreenSpaceEventType.LEFT_CLICK)
+
+    handler.setInputAction(function(event) {
+      var wp = event.endPosition
+      if (!Cesium.defined(wp)) {
+        return
+      }
+      var ray = viewer.scene.camera.getPickRay(wp)
+      if (!Cesium.defined(ray)) {
+        return
+      }
+      var cartesian = viewer.scene.globe.pick(ray, viewer.scene)
+      if (!Cesium.defined(cartesian)) {
+        return
+      }
+      if (cartesian) {
+        var cartographic = Cesium.Cartographic.fromCartesian(cartesian)
+        _this.listenInfo.longitude = Cesium.Math.toDegrees(cartographic.longitude).toFixed(6)
+        _this.listenInfo.latitude = Cesium.Math.toDegrees(cartographic.latitude).toFixed(6)
+        _this.listenInfo.height = viewer.scene.globe.getHeight(cartographic).toFixed(2)
+      }
+    }, Cesium.ScreenSpaceEventType.MOUSE_MOVE)
+
+    viewer.camera.changed.addEventListener(()=>{
+      // 当前高度
+      _this.listenInfo.cameraHeight = viewer.camera.positionCartographic.height.toFixed(0);
+      // 下面可以写其他的代码了
+    });
+
   }
 }
 </script>
@@ -136,5 +218,25 @@ export default {
 #cesiumContainer {
   width: 100%;
   height: 440px;
+  position: relative;
+}
+
+.panel {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+  /*width: 100px;*/
+  background: #FFF;
+  padding: 0 10px;
+}
+.info {
+  position: absolute;
+  bottom: 0px;
+  right: 40px;
+  z-index: 1;
+  color: #FFF;
+  font-size: 14px;
+  background: transparent;
 }
 </style>

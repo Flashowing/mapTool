@@ -38,6 +38,9 @@
 <!--                     v-clipboard:error="onError" v-show="showCopy" :underline="false" type="primary"-->
 <!--                     icon="el-icon-document-copy">复制-->
 <!--            </el-link>-->
+            <el-link @click='onCopy' v-show='showCopy' type='primary'
+                     icon='el-icon-document-copy'>复制
+            </el-link>
           </td>
         </tr>
         <tr>
@@ -86,6 +89,7 @@ export default {
       }
     },
     onCopy: function () {
+      this.$clipboard(this.result)
       this.$message.success('复制成功')
     },
     onError: function () {
