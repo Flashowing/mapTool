@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!--    <router-view />-->
     <el-container>
       <el-header>
         <el-row>
@@ -19,7 +18,8 @@
           </el-col>
           <el-col :md="12">
             <div class="map">
-              <router-view />
+<!--              <router-view />-->
+              <CesiumContainer></CesiumContainer>
             </div>
           </el-col>
         </el-row>
@@ -39,13 +39,15 @@
 <script>
 import Header from '@/views/transform/Header'
 import TransformTable from '@/views/transform/TransformTable'
+import CesiumContainer from '@/views/transform/CesiumContainer.vue'
 import 'element-ui/lib/theme-chalk/display.css'
 
 export default {
   name: 'Main',
   components: {
     Header,
-    TransformTable
+    TransformTable,
+    CesiumContainer
   },
   data: function () {
     return {
