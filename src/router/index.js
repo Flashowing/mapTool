@@ -1,10 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import CesiumContainer from '@/views/transform/CesiumContainer.vue'
+import TransformMain from '@/views/transform/Main.vue'
 import Home from '@/views/main/Home.vue'
 import CountScore from '@/views/countScore/countScore'
 
-console.log(CesiumContainer)
 Vue.use(VueRouter)
 
 const routes = [
@@ -21,7 +20,7 @@ const routes = [
   {
     path: '/coordTrans',
     name: 'cesiumContainer',
-    component: CesiumContainer
+    component: TransformMain
   }
 ]
 

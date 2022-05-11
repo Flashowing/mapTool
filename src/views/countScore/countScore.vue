@@ -1,7 +1,7 @@
 <template>
   <div class='outer-wrap'>
     <el-container>
-      <el-header>业绩指标分值计算</el-header>
+      <el-header class='header'><h1>业绩指标分值计算</h1></el-header>
       <el-main>
         <el-form ref='form' :model='form' label-width='100px'>
           <el-form-item label='月度业绩指标' prop='yuedu' :rules="[{ type: 'number', message: '必须为数字值'}]">
@@ -19,7 +19,7 @@
           </el-form-item>
           <el-form-item>
             <el-button type='primary' plain @click="countScore('form')">计算</el-button>
-            <el-button @click="reset">重置</el-button>
+            <el-button @click='reset'>重置</el-button>
           </el-form-item>
         </el-form>
       </el-main>
@@ -99,6 +99,10 @@ export default {
   margin: 0 auto;
   height: 100%;
   position: relative;
+}
+
+.outer-wrap .header {
+  text-align: center;
 }
 
 .el-container {

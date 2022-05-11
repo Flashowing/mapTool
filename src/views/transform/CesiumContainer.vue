@@ -135,6 +135,6 @@ export default {
 <style scoped>
 #cesiumContainer {
   width: 100%;
-  height: 380px;
+  height: 440px;
 }
 </style>

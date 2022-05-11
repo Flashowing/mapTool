@@ -11,7 +11,7 @@
     <el-row>
       <table>
         <tr>
-          <td>longitude:</td>
+          <td>经度(longitude):</td>
           <td>
             <el-col :span="6" :xs="24">
               <div class="grid-content bg-purple">
@@ -21,7 +21,7 @@
           </td>
         </tr>
         <tr>
-          <td>latitude:</td>
+          <td>纬度(latitude):</td>
           <td>
             <el-col :span="6" :xs="24">
               <div class="grid-content bg-purple">

@@ -2,35 +2,13 @@
   <div>
     <el-container>
       <el-header>
-        <el-row>
-          <el-col :md="6" class="hidden-xs-only">
-            <div style="color: white">placeholder</div>
-          </el-col>
-          <el-col :md="12" :xs="24">
             <Header/>
-          </el-col>
-        </el-row>
       </el-header>
       <el-main>
-        <el-row>
-          <el-col :md="6">
-            <div style="color: white">placeholder</div>
-          </el-col>
-          <el-col :md="12">
             <div class="map">
-<!--              <router-view />-->
               <CesiumContainer></CesiumContainer>
             </div>
-          </el-col>
-        </el-row>
-        <el-row>
-          <el-col :md="6" class="hidden-xs-only">
-            <div style="color: white">placeholder</div>
-          </el-col>
-          <el-col :md="12" :xs="24">
             <TransformTable></TransformTable>
-          </el-col>
-        </el-row>
       </el-main>
     </el-container>
   </div>
