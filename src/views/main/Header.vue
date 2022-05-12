@@ -83,7 +83,13 @@ export default {
   float: right !important;
 }
 
+
 .el-menu--horizontal > .el-submenu {
   float: right !important;
+}
+
+.container .el-menu-item a {
+  display: block;
+  text-decoration: none;
 }
 </style>

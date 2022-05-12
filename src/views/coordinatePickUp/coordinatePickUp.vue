@@ -4,27 +4,38 @@
       <el-row>
         <el-col :span='17' class='full-height'>
           <div id='cesiumContainer'>
-            <div class='coordinate-tooltip' :style='{ left: coordinateTooltipX, top: coordinateTooltipY }'> {{ coordinate }}</div>
+            <div class='coordinate-tooltip' :style='{ left: coordinateTooltipX, top: coordinateTooltipY }'>
+              {{ coordinate }}
+            </div>
           </div>
         </el-col>
         <el-col :span='7' class='full-height'>
-          <el-header><h1>地址</h1></el-header>
+          <el-header><h1>{{ formLabelAlign.formatted_addresses }}</h1></el-header>
           <div class='right-form'>
             <el-form :label-position='labelPosition' :model='formLabelAlign'>
               <el-form-item label='WGS84坐标'>
-                <el-input v-model='formLabelAlign.wgs84'><i slot='suffix'
+                <el-input v-model='formLabelAlign.wgs84'><i slot='suffix' v-clipboard='() => formLabelAlign.wgs84'
+                                                            v-clipboard:error='onCopyError'
+                                                            v-clipboard:success='onCopy'
                                                             class='el-input__icon el-icon-document-copy'></i></el-input>
               </el-form-item>
               <el-form-item label='GCJ02坐标'>
-                <el-input v-model='formLabelAlign.gcj02'><i slot='suffix'
+                <el-input v-model='formLabelAlign.gcj02'><i slot='suffix' v-clipboard='() => formLabelAlign.gcj02'
+                                                            v-clipboard:error='onCopyError'
+                                                            v-clipboard:success='onCopy'
                                                             class='el-input__icon el-icon-document-copy'></i></el-input>
               </el-form-item>
-              <el-form-item label='百度坐标'>
-                <el-input v-model='formLabelAlign.bd'><i slot='suffix' class='el-input__icon el-icon-document-copy'></i>
+              <el-form-item label='BD09坐标'>
+                <el-input v-model='formLabelAlign.bd09'><i slot='suffix' v-clipboard='() => formLabelAlign.bd09'
+                                                           v-clipboard:error='onCopyError'
+                                                           v-clipboard:success='onCopy'
+                                                           class='el-input__icon el-icon-document-copy'></i>
                 </el-input>
               </el-form-item>
               <el-form-item label='地址'>
-                <el-input v-model='formLabelAlign.address'><i slot='suffix'
+                <el-input v-model='formLabelAlign.address'><i slot='suffix' v-clipboard='() => formLabelAlign.address'
+                                                              v-clipboard:error='onCopyError'
+                                                              v-clipboard:success='onCopy'
                                                               class='el-input__icon el-icon-document-copy'></i>
                 </el-input>
               </el-form-item>
@@ -38,6 +49,8 @@
 
 <script>
 import { Viewer } from 'cesium'
+import { wgs84togcj02, gcj02tobd09 } from '@/utils/transformCoordinate'
+import { jsonp } from 'vue-jsonp'
 
 export default {
   name: 'coordinatePickUp',
@@ -45,10 +58,11 @@ export default {
     return {
       labelPosition: 'top',
       formLabelAlign: {
-        wgs84: '',
-        gcj02: '',
-        bd: '',
-        address: ''
+        wgs84: '-',
+        gcj02: '-',
+        bd09: '-',
+        address: '-',
+        formatted_addresses: '点图获取坐标',
       },
       coordinate: '',
       coordinateTooltipX: 0,
@@ -61,7 +75,7 @@ export default {
     /* eslint no-new: */
     Cesium.Ion.defaultAccessToken =
       'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI0YWJlYzNkNS0yY2M0LTQxZWQtOGZhNi05MjEzYmVmZGVkNTkiLCJpZCI6MzU1NTEsImlhdCI6MTYwNDYyNzY2NH0.JxhQQxEvJTrmeARILcywKaPoPEPjO1RlqL28CRjktx8'
-    // eslint-disable-next-line no-unused-vars
+    // eslint-disable-next-line no-unused-lets
     const viewer = new Viewer('cesiumContainer', {
       homeButton: true, // 主页按钮
       baseLayerPicker: false, // 是否显示图层选择控件
@@ -81,7 +95,7 @@ export default {
     })
     this.isFullscreen = true
     window._viewer = viewer
-    var fullscreen = document.createElement('div') // 自定义全屏按钮只全屏canvas
+    let fullscreen = document.createElement('div') // 自定义全屏按钮只全屏canvas
     fullscreen.style.position = 'absolute'
     fullscreen.style.bottom = '0px'
     fullscreen.style.right = '0px'
@@ -89,7 +103,7 @@ export default {
     fullscreen.style.height = '30px'
     fullscreen.style.width = '30px'
     fullscreen.className = 'hidden-xs-only'
-    var c = document.getElementsByClassName('cesium-viewer')
+    let c = document.getElementsByClassName('cesium-viewer')
     c[0].appendChild(fullscreen)
     window._fullscreenButton = new Cesium.FullscreenButton(document.getElementById('fullscreen'), document.getElementById('cesiumContainer'))
     // if (window._fullscreenButton.viewModel.tooltip == "Full screen"){
@@ -123,13 +137,13 @@ export default {
       maximumHeight: 5000, // 相机最大飞行高度
       flyOverLongitude: 100 // 如果到达目的地有2种方式，设置具体值后会强制选择方向飞过这个经度(这个，很好用)
     })
-    var token = 'c6a366fc893103a30164aef8a5a298f7'
+    let token = 'c6a366fc893103a30164aef8a5a298f7'
     // 服务域名
-    var tdtUrl = 'https://t{s}.tianditu.gov.cn/'
+    let tdtUrl = 'https://t{s}.tianditu.gov.cn/'
     // 服务负载子域
-    var subdomains = ['0', '1', '2', '3', '4', '5', '6', '7']
+    let subdomains = ['0', '1', '2', '3', '4', '5', '6', '7']
     // 叠加影像服务
-    var imgMap = new Cesium.UrlTemplateImageryProvider({
+    let imgMap = new Cesium.UrlTemplateImageryProvider({
       url: tdtUrl + 'DataServer?T=img_w&x={x}&y={y}&l={z}&tk=' + token,
       subdomains: subdomains,
       tilingScheme: new Cesium.WebMercatorTilingScheme(),
@@ -138,7 +152,7 @@ export default {
     viewer.imageryLayers.addImageryProvider(imgMap)
 
     // 叠加国界服务
-    var iboMap = new Cesium.UrlTemplateImageryProvider({
+    let iboMap = new Cesium.UrlTemplateImageryProvider({
       url: tdtUrl + 'DataServer?T=ibo_w&x={x}&y={y}&l={z}&tk=' + token,
       subdomains: subdomains,
       tilingScheme: new Cesium.WebMercatorTilingScheme(),
@@ -146,9 +160,9 @@ export default {
     })
     viewer.imageryLayers.addImageryProvider(iboMap)
 
-    var TDT_CVA_W = 'http://{s}.tianditu.gov.cn/cva_w/wmts?service=wmts&request=GetTile&version=1.0.0' + '&LAYER=cva&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}' + '&style=default.jpg&tk=' + token
+    let TDT_CVA_W = 'http://{s}.tianditu.gov.cn/cva_w/wmts?service=wmts&request=GetTile&version=1.0.0' + '&LAYER=cva&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}' + '&style=default.jpg&tk=' + token
 
-    var zhLayer = new Cesium.WebMapTileServiceImageryProvider({
+    let zhLayer = new Cesium.WebMapTileServiceImageryProvider({
       url: TDT_CVA_W,
       layer: 'cva',
       style: 'default',
@@ -193,6 +207,75 @@ export default {
         _this.coordinateTooltipX = (wp.x + 15) + 'px'
       }
     }, Cesium.ScreenSpaceEventType.MOUSE_MOVE)
+    handler.setInputAction(function(event) {
+      let wp = event.position
+      if (!Cesium.defined(wp)) {
+        return
+      }
+      let ray = viewer.scene.camera.getPickRay(wp)
+      if (!Cesium.defined(ray)) {
+        return
+      }
+      let cartesian = viewer.scene.globe.pick(ray, viewer.scene)
+      if (!Cesium.defined(cartesian)) {
+        return
+      }
+      if (cartesian) {
+        let cartographic = Cesium.Cartographic.fromCartesian(cartesian)
+        let longitude = Cesium.Math.toDegrees(cartographic.longitude).toFixed(6)
+        let latitude = Cesium.Math.toDegrees(cartographic.latitude).toFixed(6)
+        _this.formLabelAlign.wgs84 = longitude + ',' + latitude
+        let gcj02 = wgs84togcj02(+longitude, +latitude)
+        _this.formLabelAlign.gcj02 = gcj02.map(item => item.toFixed(6)).join(',')
+        _this.formLabelAlign.bd09 = gcj02tobd09(gcj02[0], gcj02[1]).map(item => item.toFixed(6)).join(',')
+
+
+        // axios.get('https://apis.map.qq.com/ws/geocoder/v1/?output=jsonp', {
+        //   params: {
+        //     location: `${latitude},${longitude}`,
+        //     key: 'IOBBZ-5JNYS-4XZOL-66OLK-XAQ7T-JHFBU'
+        //   },
+        //   dataType: 'jsonp',
+        //   headers: {
+        //     'Access-Control-Allow-Origin': '*',
+        //     'Access-Control-Allow-Methods': 'GET,POST',
+        //   }
+        // })
+        //   .then(function (response) {
+        //     console.log(response)
+        //     if (response.data.status === 0) {
+        //     }
+        //   })
+        //   .catch(function (error) {
+        //     console.log(error);
+        //   });
+
+        const KEY = "IOBBZ-5JNYS-4XZOL-66OLK-XAQ7T-JHFBU";
+        let url = "https://apis.map.qq.com/ws/geocoder/v1/"
+        jsonp(url, {
+          key: KEY,
+          location: `${gcj02[1]},${gcj02[0]}`,
+          output: "jsonp"
+        }).then(res => {
+          _this.formLabelAlign.address = res.result.address;
+          _this.formLabelAlign.formatted_addresses = res.result.formatted_addresses.recommend;
+        }).catch(err => {
+          console.log(err)
+        })
+      }
+    }, Cesium.ScreenSpaceEventType.LEFT_CLICK)
+
+    document.querySelector('#cesiumContainer').onmouseout = function(event) {
+      document.querySelector('.coordinate-tooltip').style.display = 'none'
+    }
+  },
+  methods: {
+    onCopy: function() {
+      this.$message.success('复制成功')
+    },
+    onCopyError: function() {
+      this.$message.error('复制失败')
+    }
   }
 }
 </script>
@@ -225,6 +308,7 @@ export default {
 .coordinate-tooltip {
   position: absolute;
   z-index: 1;
+  display: none;
   color: #FFF;
   padding: 8px;
   border-radius: 5px;

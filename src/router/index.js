@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import TransformMain from '@/views/transform/Main.vue'
 import Home from '@/views/main/Home.vue'
 import CountScore from '@/views/countScore/countScore'
+import Calculator from '@/views/countScore/CalculatorContent'
 import CoordinatePickUp from '@/views/coordinatePickUp/coordinatePickUp'
 
 Vue.use(VueRouter)
@@ -27,6 +28,11 @@ const routes = [
     path: '/coordinatePickUp',
     name: 'coordinatePickUp',
     component: CoordinatePickUp
+  },
+  {
+    path: '/calculator',
+    name: 'calculator',
+    component: Calculator
   }
 ]
 
