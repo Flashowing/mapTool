@@ -14,32 +14,48 @@
           <div class='right-form'>
             <el-form :label-position='labelPosition' :model='formLabelAlign'>
               <el-form-item label='WGS84坐标'>
-                <el-input v-model='formLabelAlign.wgs84'><i slot='suffix' v-clipboard='() => formLabelAlign.wgs84'
-                                                            v-clipboard:error='onCopyError'
-                                                            v-clipboard:success='onCopy'
-                                                            class='el-input__icon el-icon-document-copy'></i></el-input>
+                <el-input v-model='formLabelAlign.wgs84' readonly><i slot='suffix'
+                                                                     v-clipboard='() => formLabelAlign.wgs84'
+                                                                     v-clipboard:error='onCopyError'
+                                                                     v-clipboard:success='onCopy'
+                                                                     class='el-input__icon el-icon-document-copy'></i>
+                </el-input>
               </el-form-item>
-              <el-form-item label='GCJ02坐标'>
-                <el-input v-model='formLabelAlign.gcj02'><i slot='suffix' v-clipboard='() => formLabelAlign.gcj02'
-                                                            v-clipboard:error='onCopyError'
-                                                            v-clipboard:success='onCopy'
-                                                            class='el-input__icon el-icon-document-copy'></i></el-input>
+              <el-form-item label='火星坐标系'>
+                <el-input v-model='formLabelAlign.gcj02' readonly><i slot='suffix'
+                                                                     v-clipboard='() => formLabelAlign.gcj02'
+                                                                     v-clipboard:error='onCopyError'
+                                                                     v-clipboard:success='onCopy'
+                                                                     class='el-input__icon el-icon-document-copy'></i>
+                </el-input>
               </el-form-item>
-              <el-form-item label='BD09坐标'>
-                <el-input v-model='formLabelAlign.bd09'><i slot='suffix' v-clipboard='() => formLabelAlign.bd09'
-                                                           v-clipboard:error='onCopyError'
-                                                           v-clipboard:success='onCopy'
-                                                           class='el-input__icon el-icon-document-copy'></i>
+              <el-form-item label='百度坐标系'>
+                <el-input v-model='formLabelAlign.bd09' readonly><i slot='suffix'
+                                                                    v-clipboard='() => formLabelAlign.bd09'
+                                                                    v-clipboard:error='onCopyError'
+                                                                    v-clipboard:success='onCopy'
+                                                                    class='el-input__icon el-icon-document-copy'></i>
                 </el-input>
               </el-form-item>
               <el-form-item label='地址'>
-                <el-input v-model='formLabelAlign.address'><i slot='suffix' v-clipboard='() => formLabelAlign.address'
-                                                              v-clipboard:error='onCopyError'
-                                                              v-clipboard:success='onCopy'
-                                                              class='el-input__icon el-icon-document-copy'></i>
+                <el-input v-model='formLabelAlign.address' readonly><i slot='suffix'
+                                                                       v-clipboard='() => formLabelAlign.address'
+                                                                       v-clipboard:error='onCopyError'
+                                                                       v-clipboard:success='onCopy'
+                                                                       class='el-input__icon el-icon-document-copy'></i>
                 </el-input>
               </el-form-item>
             </el-form>
+          </div>
+          <el-header><h1>相关功能</h1></el-header>
+          <div class='right-form'>
+            <el-link class='trans-coord-btn' type="info" href='#/coordTrans' :underline="false">
+              <el-card class='box-card'>
+                <div class='text item'>
+                  坐标转换
+                </div>
+              </el-card>
+            </el-link>
           </div>
         </el-col>
       </el-row>
@@ -62,7 +78,7 @@ export default {
         gcj02: '-',
         bd09: '-',
         address: '-',
-        formatted_addresses: '点图获取坐标',
+        formatted_addresses: '点图获取坐标'
       },
       coordinate: '',
       coordinateTooltipX: 0,
@@ -250,15 +266,15 @@ export default {
         //     console.log(error);
         //   });
 
-        const KEY = "IOBBZ-5JNYS-4XZOL-66OLK-XAQ7T-JHFBU";
-        let url = "https://apis.map.qq.com/ws/geocoder/v1/"
+        const KEY = 'IOBBZ-5JNYS-4XZOL-66OLK-XAQ7T-JHFBU'
+        let url = 'https://apis.map.qq.com/ws/geocoder/v1/'
         jsonp(url, {
           key: KEY,
           location: `${gcj02[1]},${gcj02[0]}`,
-          output: "jsonp"
+          output: 'jsonp'
         }).then(res => {
-          _this.formLabelAlign.address = res.result.address;
-          _this.formLabelAlign.formatted_addresses = res.result.formatted_addresses.recommend;
+          _this.formLabelAlign.address = res.result.address
+          _this.formLabelAlign.formatted_addresses = res.result.formatted_addresses.recommend
         }).catch(err => {
           console.log(err)
         })
@@ -316,4 +332,13 @@ export default {
   background: rgba(0, 0, 0, 0.7);
   pointer-events: none;
 }
+
+.trans-coord-btn{
+  display: block;
+}
+
+.trans-coord-btn .el-card:hover {
+  background-color: #f7f9fd;
+}
+
 </style>

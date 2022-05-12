@@ -21,7 +21,7 @@
             <el-button type='primary' plain @click="countScore('form')">计算</el-button>
             <el-button @click='reset'>重置</el-button>
 <!--            <el-link class='calculator-btn' type='primary'>计算器</el-link>-->
-            <el-link class='calculator-btn' type='primary'  href='#/calculator'>计算器</el-link>
+            <el-link class='calculator-btn' type='primary' href='#/calculator'>计算器</el-link>
           </el-form-item>
         </el-form>
       </el-main>

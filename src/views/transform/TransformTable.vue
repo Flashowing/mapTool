@@ -16,6 +16,9 @@
       <el-tab-pane label="度分秒坐标转换" name="fifth">
         <TransDuFenMiao></TransDuFenMiao>
       </el-tab-pane>
+      <el-tab-pane label="坐标系转换" name="sixth">
+        <CoordinateSystemTransformation></CoordinateSystemTransformation>
+      </el-tab-pane>
     </el-tabs>
   </div>
 </template>
@@ -26,6 +29,7 @@ import CartesianToDegrees from '@/views/transform/CartesianToDegrees'
 import DegreesToCartographic from '@/views/transform/DegreesToCartographic'
 import TransDuFenMiao from '@/views/transform/TransDuFenMiao'
 import CartographicToDegrees from '@/views/transform/CartographicToDegrees'
+import CoordinateSystemTransformation from '@/views/transform/CoordinateSystemTransformation'
 export default {
   name: 'TransformTable',
   data() {
@@ -38,7 +42,8 @@ export default {
     CartesianToDegrees,
     DegreesToCartographic,
     TransDuFenMiao,
-    CartographicToDegrees
+    CartographicToDegrees,
+    CoordinateSystemTransformation
   },
   methods: {
     handleClick(tab, event) {

@@ -50,7 +50,7 @@ export default {
     /* eslint no-new: */
     Cesium.Ion.defaultAccessToken =
       'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI0YWJlYzNkNS0yY2M0LTQxZWQtOGZhNi05MjEzYmVmZGVkNTkiLCJpZCI6MzU1NTEsImlhdCI6MTYwNDYyNzY2NH0.JxhQQxEvJTrmeARILcywKaPoPEPjO1RlqL28CRjktx8'
-    // eslint-disable-next-line no-unused-vars
+    // eslint-disable-next-line no-unused-lets
     const viewer = new Viewer('cesiumContainer', {
       homeButton: true, // 主页按钮
       baseLayerPicker: false, // 是否显示图层选择控件
@@ -70,7 +70,7 @@ export default {
     })
     this.isFullscreen = true
     window._viewer = viewer
-    var fullscreen = document.createElement('div') // 自定义全屏按钮只全屏canvas
+    let fullscreen = document.createElement('div') // 自定义全屏按钮只全屏canvas
     fullscreen.style.position = 'absolute'
     fullscreen.style.bottom = '0px'
     fullscreen.style.right = '0px'
@@ -78,7 +78,7 @@ export default {
     fullscreen.style.height = '30px'
     fullscreen.style.width = '30px'
     fullscreen.className = 'hidden-xs-only'
-    var c = document.getElementsByClassName('cesium-viewer')
+    let c = document.getElementsByClassName('cesium-viewer')
     c[0].appendChild(fullscreen)
     window._fullscreenButton = new Cesium.FullscreenButton(document.getElementById('fullscreen'), document.getElementById('cesiumContainer'))
     // if (window._fullscreenButton.viewModel.tooltip == "Full screen"){
@@ -112,13 +112,13 @@ export default {
       maximumHeight: 5000, // 相机最大飞行高度
       flyOverLongitude: 100 // 如果到达目的地有2种方式，设置具体值后会强制选择方向飞过这个经度(这个，很好用)
     })
-    var token = 'c6a366fc893103a30164aef8a5a298f7'
+    let token = 'c6a366fc893103a30164aef8a5a298f7'
     // 服务域名
-    var tdtUrl = 'https://t{s}.tianditu.gov.cn/'
+    let tdtUrl = 'https://t{s}.tianditu.gov.cn/'
     // 服务负载子域
-    var subdomains = ['0', '1', '2', '3', '4', '5', '6', '7']
+    let subdomains = ['0', '1', '2', '3', '4', '5', '6', '7']
     // 叠加影像服务
-    var imgMap = new Cesium.UrlTemplateImageryProvider({
+    let imgMap = new Cesium.UrlTemplateImageryProvider({
       url: tdtUrl + 'DataServer?T=img_w&x={x}&y={y}&l={z}&tk=' + token,
       subdomains: subdomains,
       tilingScheme: new Cesium.WebMercatorTilingScheme(),
@@ -127,7 +127,7 @@ export default {
     viewer.imageryLayers.addImageryProvider(imgMap)
 
     // 叠加国界服务
-    var iboMap = new Cesium.UrlTemplateImageryProvider({
+    let iboMap = new Cesium.UrlTemplateImageryProvider({
       url: tdtUrl + 'DataServer?T=ibo_w&x={x}&y={y}&l={z}&tk=' + token,
       subdomains: subdomains,
       tilingScheme: new Cesium.WebMercatorTilingScheme(),
@@ -135,9 +135,9 @@ export default {
     })
     viewer.imageryLayers.addImageryProvider(iboMap)
 
-    var TDT_CVA_W = 'http://{s}.tianditu.gov.cn/cva_w/wmts?service=wmts&request=GetTile&version=1.0.0' + '&LAYER=cva&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}' + '&style=default.jpg&tk=' + token
+    let TDT_CVA_W = 'http://{s}.tianditu.gov.cn/cva_w/wmts?service=wmts&request=GetTile&version=1.0.0' + '&LAYER=cva&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}' + '&style=default.jpg&tk=' + token
 
-    var zhLayer = new Cesium.WebMapTileServiceImageryProvider({
+    let zhLayer = new Cesium.WebMapTileServiceImageryProvider({
       url: TDT_CVA_W,
       layer: 'cva',
       style: 'default',
@@ -160,20 +160,20 @@ export default {
 
     const handler = new Cesium.ScreenSpaceEventHandler(viewer.scene.canvas)
     handler.setInputAction(function(event) {
-      var wp = event.position
+      let wp = event.position
       if (!Cesium.defined(wp)) {
         return
       }
-      var ray = viewer.scene.camera.getPickRay(wp)
+      let ray = viewer.scene.camera.getPickRay(wp)
       if (!Cesium.defined(ray)) {
         return
       }
-      var cartesian = viewer.scene.globe.pick(ray, viewer.scene)
+      let cartesian = viewer.scene.globe.pick(ray, viewer.scene)
       if (!Cesium.defined(cartesian)) {
         return
       }
       if (cartesian) {
-        var cartographic = Cesium.Cartographic.fromCartesian(cartesian)
+        let cartographic = Cesium.Cartographic.fromCartesian(cartesian)
         _this.coords.longitude = Cesium.Math.toDegrees(cartographic.longitude)
         _this.coords.latitude = Cesium.Math.toDegrees(cartographic.latitude)
         _this.coords.height = viewer.scene.globe.getHeight(cartographic)
@@ -183,20 +183,20 @@ export default {
     }, Cesium.ScreenSpaceEventType.LEFT_CLICK)
 
     handler.setInputAction(function(event) {
-      var wp = event.endPosition
+      let wp = event.endPosition
       if (!Cesium.defined(wp)) {
         return
       }
-      var ray = viewer.scene.camera.getPickRay(wp)
+      let ray = viewer.scene.camera.getPickRay(wp)
       if (!Cesium.defined(ray)) {
         return
       }
-      var cartesian = viewer.scene.globe.pick(ray, viewer.scene)
+      let cartesian = viewer.scene.globe.pick(ray, viewer.scene)
       if (!Cesium.defined(cartesian)) {
         return
       }
       if (cartesian) {
-        var cartographic = Cesium.Cartographic.fromCartesian(cartesian)
+        let cartographic = Cesium.Cartographic.fromCartesian(cartesian)
         _this.listenInfo.longitude = Cesium.Math.toDegrees(cartographic.longitude).toFixed(6)
         _this.listenInfo.latitude = Cesium.Math.toDegrees(cartographic.latitude).toFixed(6)
         _this.listenInfo.height = viewer.scene.globe.getHeight(cartographic).toFixed(2)
