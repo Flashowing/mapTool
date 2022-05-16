@@ -5,7 +5,7 @@
   <p align="center">基于vueCli 4.x.x + 和 electron 6.x.x+ 的cesium桌面坐标转换工具</p>
    <p align="center">
 
-# cesium-vue-electron
+# mapTool
 
 ##  项目安装(Project setup)
 ```

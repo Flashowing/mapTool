@@ -1,6 +1,6 @@
 {
-  "name": "cesium-vue-electron",
-  "description": "cesium-vue-electron",
+  "name": "mapTool",
+  "description": "mapTool",
   "author": "liubf",
   "version": "0.1.0",
   "private": true,
