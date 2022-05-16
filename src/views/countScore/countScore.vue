@@ -81,16 +81,16 @@ export default {
 </script>
 
 <style scoped>
-* {
-  margin: 0;
-  padding: 0
-}
-
 .el-main {
   box-shadow: 0px 0px 8px 0px #9e9e9e;
   border-radius: 5px;
   background-color: #fffefc;
   text-align: left;
+  padding: 20px;
+}
+
+.el-form-item {
+  margin-bottom: 22px;
 }
 
 .header h1 .el-icon-question:hover {
