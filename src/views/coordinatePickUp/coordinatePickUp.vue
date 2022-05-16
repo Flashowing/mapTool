@@ -13,7 +13,7 @@
           <el-header><h1>{{ formLabelAlign.formatted_addresses }}</h1></el-header>
           <div class='right-form'>
             <el-form :label-position='labelPosition' :model='formLabelAlign'>
-              <el-form-item label='WGS84坐标'>
+              <el-form-item label='WGS84坐标系'>
                 <el-input v-model='formLabelAlign.wgs84' readonly><i slot='suffix'
                                                                      v-clipboard='() => formLabelAlign.wgs84'
                                                                      v-clipboard:error='onCopyError'
