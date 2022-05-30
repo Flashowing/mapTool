@@ -129,17 +129,18 @@ export default {
       e.cancel = true
       // 你要飞的位置
       viewer.camera.flyTo({
-        destination: Cesium.Cartesian3.fromDegrees(106.57235543868288, 29.560696474923013, 10000)
+        destination: new Cesium.Cartesian3(-1564159.7858402105, 5317109.879222187, 3153973.184916946)
       })
     })
 
     // 去除版权信息
     viewer._cesiumWidget._creditContainer.style.display = 'none'
+
     viewer.camera.flyTo({
-      destination: Cesium.Cartesian3.fromDegrees(106.57235543868288, 29.560696474923013, 10000), // 设置位置
+      destination: new Cesium.Cartesian3(-1564159.7858402105, 5317109.879222187, 3153973.184916946), // 设置位置
       orientation: {
-        heading: Cesium.Math.toRadians(0.0), // 方向
-        pitch: Cesium.Math.toRadians(-90.0), // 倾斜角度
+        heading: Cesium.Math.toRadians(359.5738468914868), // 方向
+        pitch: Cesium.Math.toRadians(-89.62969989282242), // 倾斜角度
         roll: Cesium.Math.toRadians(0)
       },
       duration: 5, // 设置飞行持续时间，默认会根据距离来计算
@@ -153,50 +154,26 @@ export default {
       maximumHeight: 5000, // 相机最大飞行高度
       flyOverLongitude: 100 // 如果到达目的地有2种方式，设置具体值后会强制选择方向飞过这个经度(这个，很好用)
     })
-    let token = 'c6a366fc893103a30164aef8a5a298f7'
-    // 服务域名
-    let tdtUrl = 'https://t{s}.tianditu.gov.cn/'
-    // 服务负载子域
-    let subdomains = ['0', '1', '2', '3', '4', '5', '6', '7']
-    // 叠加影像服务
-    let imgMap = new Cesium.UrlTemplateImageryProvider({
-      url: tdtUrl + 'DataServer?T=img_w&x={x}&y={y}&l={z}&tk=' + token,
-      subdomains: subdomains,
-      tilingScheme: new Cesium.WebMercatorTilingScheme(),
-      maximumLevel: 18
-    })
-    viewer.imageryLayers.addImageryProvider(imgMap)
-
-    // 叠加国界服务
-    let iboMap = new Cesium.UrlTemplateImageryProvider({
-      url: tdtUrl + 'DataServer?T=ibo_w&x={x}&y={y}&l={z}&tk=' + token,
-      subdomains: subdomains,
-      tilingScheme: new Cesium.WebMercatorTilingScheme(),
-      maximumLevel: 10
-    })
-    viewer.imageryLayers.addImageryProvider(iboMap)
-
-    let TDT_CVA_W = 'http://{s}.tianditu.gov.cn/cva_w/wmts?service=wmts&request=GetTile&version=1.0.0' + '&LAYER=cva&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}' + '&style=default.jpg&tk=' + token
-
-    let zhLayer = new Cesium.WebMapTileServiceImageryProvider({
-      url: TDT_CVA_W,
-      layer: 'cva',
-      style: 'default',
-      format: 'jpg',
-      tileMatrixSetID: 'w',
-      maximumLevel: 18
-    })
-    viewer.imageryLayers.addImageryProvider(zhLayer)
-
+    let matrixIds = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20']
     viewer.imageryLayers.addImageryProvider(new Cesium.WebMapTileServiceImageryProvider({
-      // 影像注记
-      url: 'http://t{s}.tianditu.com/cia_w/wmts?service=wmts&request=GetTile&version=1.0.0&LAYER=cia&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}&style=default.jpg&tk=' + token,
-      subdomains: subdomains,
-      layer: 'tdtCiaLayer',
-      style: 'default',
+      url: 'http://222.178.182.14:9010/wmts',
+      tilingScheme: new Cesium.GeographicTilingScheme(),
       format: 'image/jpeg',
-      tileMatrixSetID: 'GoogleMapsCompatible',
-      show: true
+      style: 'default',
+      layer: 'img',
+      tileMatrixSetID: 'c',
+      tileMatrixLabels: matrixIds,
+      maximumLevel: 20
+    }))
+    let wxt = viewer.imageryLayers.addImageryProvider(new Cesium.UrlTemplateImageryProvider({
+      url: 'http://183.230.114.154:9010/Satellite/{z}/{x}/{y}.png'
+    }))
+    wxt.saturation = 1.7
+    viewer.imageryLayers.addImageryProvider(new Cesium.UrlTemplateImageryProvider({
+      url: 'http://222.178.182.14:9010/dataserver?x={x}&y={y}&l={z}&t=cva_c',
+      tilingScheme: new Cesium.GeographicTilingScheme(),
+      maximumLevel: 20,
+      format: 'image/png'
     }))
 
     const handler = new Cesium.ScreenSpaceEventHandler(viewer.scene.canvas)

@@ -19,7 +19,7 @@
         <!--            </el-menu-item>-->
         <el-submenu index='4'>
           <template slot='title'>项目</template>
-          <el-menu-item index='2-1'><a href='http://222.178.182.14:18090/web/' target='_blank'>空间地理数据库</a>
+          <el-menu-item index='2-1'><a href='http://183.230.114.154:9010/map/spatialGeographicDatabase/' target='_blank'>空间地理数据库</a>
           </el-menu-item>
         </el-submenu>
         <el-menu-item index='3' disabled>文档</el-menu-item>
@@ -29,6 +29,7 @@
           </el-menu-item>
           <el-menu-item index='2-2'><router-link to='/coordinatePickUp'>坐标拾取工具</router-link></el-menu-item>
           <el-menu-item index='2-3'><router-link to='/coordTrans'>坐标转换工具</router-link></el-menu-item>
+<!--          <el-menu-item index='2-3'><a href='http://183.230.114.154:9010/map/sql-generator/' target='_blank'>结构化 SQL 生成器</a></el-menu-item>-->
 <!--          <el-submenu index='2-4'>-->
 <!--            <template slot='title'>选项4</template>-->
 <!--            <el-menu-item index='2-4-1'>选项1</el-menu-item>-->
