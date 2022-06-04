@@ -106,7 +106,7 @@ module.exports = {
   pluginOptions: {
     electronBuilder: {
       builderOptions: {
-        appId: 'liubf.com', // 开发者标示
+        appId: 'gykjcq.com', // 开发者标示
         win: {
           icon: 'my.ico' // windows系统中icon需要256*256的ico格式图片，更换应用图标亦在此处
         },
