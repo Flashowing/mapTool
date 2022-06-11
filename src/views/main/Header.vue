@@ -25,10 +25,10 @@
         <el-menu-item index='3' disabled>文档</el-menu-item>
         <el-submenu index='2'>
           <template slot='title'>工具</template>
-          <el-menu-item index='2-1'><router-link to='/countScore'>业绩指标分值计算</router-link>
-          </el-menu-item>
+          <el-menu-item index='2-1'><router-link to='/countScore'>业绩指标分值计算</router-link></el-menu-item>
           <el-menu-item index='2-2'><router-link to='/coordinatePickUp'>坐标拾取工具</router-link></el-menu-item>
           <el-menu-item index='2-3'><router-link to='/coordTrans'>坐标转换工具</router-link></el-menu-item>
+          <el-menu-item index='2-4'><router-link to='/coordLocation'>坐标定位工具</router-link></el-menu-item>
 <!--          <el-menu-item index='2-3'><a href='http://183.230.114.154:9010/map/sql-generator/' target='_blank'>结构化 SQL 生成器</a></el-menu-item>-->
 <!--          <el-submenu index='2-4'>-->
 <!--            <template slot='title'>选项4</template>-->
