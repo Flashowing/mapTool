@@ -1,6 +1,7 @@
 const webpack = require('webpack')
 const path = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const fs = require('fs')
 const cesiumSource = 'node_modules/cesium/Build/Cesium'
 
 module.exports = {
@@ -9,7 +10,14 @@ module.exports = {
   productionSourceMap: false,
   lintOnSave: false, // 是否开启eslint
   devServer: {
-    open: true
+    open: true,
+    host: 'test.local.com',
+    port: 443,
+    disableHostCheck: true,
+    https: {
+      key: fs.readFileSync(path.resolve(__dirname, './https/test.local.com-key.pem')),
+      cert: fs.readFileSync(path.resolve(__dirname, './https/test.local.com.pem'))
+    }
   },
   configureWebpack: (config) => {
     let plugins = []
