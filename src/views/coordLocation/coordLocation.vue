@@ -23,41 +23,41 @@
             <el-checkbox label='未采集' value='no' @change='checked=>checkPoint(checked, "no", "parking")'></el-checkbox>
           </el-checkbox-group>
         </div>
-        <div>
-          <span>直饮水点：</span>
-          <el-checkbox-group v-model='checkList.drinkingwater' class='chkGroup'>
-            <el-checkbox label='已采集' value='yes'
-                         @change='checked=>checkPoint(checked, "yes", "drinkingwater")'></el-checkbox>
-            <el-checkbox label='未采集' value='no'
-                         @change='checked=>checkPoint(checked, "no", "drinkingwater")'></el-checkbox>
-          </el-checkbox-group>
-        </div>
-        <div>
-          <span>劳动者港湾：</span>
-          <el-checkbox-group v-model='checkList.labourer' class='chkGroup'>
-            <el-checkbox label='已采集' value='yes'
-                         @change='checked=>checkPoint(checked, "yes", "labourer")'></el-checkbox>
-            <el-checkbox label='未采集' value='no' @change='checked=>checkPoint(checked, "no", "labourer")'></el-checkbox>
-          </el-checkbox-group>
-        </div>
-        <div>
-          <span>人行天桥：</span>
-          <el-checkbox-group v-model='checkList.footbridge' class='chkGroup'>
-            <el-checkbox label='已采集' value='yes'
-                         @change='checked=>checkPoint(checked, "yes", "footbridge")'></el-checkbox>
-            <el-checkbox label='未采集' value='no'
-                         @change='checked=>checkPoint(checked, "no", "footbridge")'></el-checkbox>
-          </el-checkbox-group>
-        </div>
-        <div>
-          <span>地下通道：</span>
-          <el-checkbox-group v-model='checkList.underpress' class='chkGroup'>
-            <el-checkbox label='已采集' value='yes'
-                         @change='checked=>checkPoint(checked, "yes", "underpress")'></el-checkbox>
-            <el-checkbox label='未采集' value='no'
-                         @change='checked=>checkPoint(checked, "no", "underpress")'></el-checkbox>
-          </el-checkbox-group>
-        </div>
+<!--        <div>-->
+<!--          <span>直饮水点：</span>-->
+<!--          <el-checkbox-group v-model='checkList.drinkingwater' class='chkGroup'>-->
+<!--            <el-checkbox label='已采集' value='yes'-->
+<!--                         @change='checked=>checkPoint(checked, "yes", "drinkingwater")'></el-checkbox>-->
+<!--            <el-checkbox label='未采集' value='no'-->
+<!--                         @change='checked=>checkPoint(checked, "no", "drinkingwater")'></el-checkbox>-->
+<!--          </el-checkbox-group>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--          <span>劳动者港湾：</span>-->
+<!--          <el-checkbox-group v-model='checkList.labourer' class='chkGroup'>-->
+<!--            <el-checkbox label='已采集' value='yes'-->
+<!--                         @change='checked=>checkPoint(checked, "yes", "labourer")'></el-checkbox>-->
+<!--            <el-checkbox label='未采集' value='no' @change='checked=>checkPoint(checked, "no", "labourer")'></el-checkbox>-->
+<!--          </el-checkbox-group>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--          <span>人行天桥：</span>-->
+<!--          <el-checkbox-group v-model='checkList.footbridge' class='chkGroup'>-->
+<!--            <el-checkbox label='已采集' value='yes'-->
+<!--                         @change='checked=>checkPoint(checked, "yes", "footbridge")'></el-checkbox>-->
+<!--            <el-checkbox label='未采集' value='no'-->
+<!--                         @change='checked=>checkPoint(checked, "no", "footbridge")'></el-checkbox>-->
+<!--          </el-checkbox-group>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--          <span>地下通道：</span>-->
+<!--          <el-checkbox-group v-model='checkList.underpress' class='chkGroup'>-->
+<!--            <el-checkbox label='已采集' value='yes'-->
+<!--                         @change='checked=>checkPoint(checked, "yes", "underpress")'></el-checkbox>-->
+<!--            <el-checkbox label='未采集' value='no'-->
+<!--                         @change='checked=>checkPoint(checked, "no", "underpress")'></el-checkbox>-->
+<!--          </el-checkbox-group>-->
+<!--        </div>-->
       </div>
     </div>
     <div class='tools'>
