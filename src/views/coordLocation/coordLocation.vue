@@ -1,5 +1,65 @@
 <template>
   <div id='cesiumContainer'>
+    <div class='buts'>
+      <div>
+        <div>
+          <span>公厕：</span>
+          <el-checkbox-group v-model='checkList.wc' class='chkGroup'>
+            <el-checkbox label='已采集' value='yes' @change='checked=>checkPoint(checked, "yes", "wc")'></el-checkbox>
+            <el-checkbox label='未采集' value='no' @change='checked=>checkPoint(checked, "no", "wc")'></el-checkbox>
+          </el-checkbox-group>
+        </div>
+        <div>
+          <span>公园：</span>
+          <el-checkbox-group v-model='checkList.park' class='chkGroup'>
+            <el-checkbox label='已采集' value='yes' @change='checked=>checkPoint(checked, "yes", "park")'></el-checkbox>
+            <el-checkbox label='未采集' value='no' @change='checked=>checkPoint(checked, "no", "park")'></el-checkbox>
+          </el-checkbox-group>
+        </div>
+        <div>
+          <span>停车场：</span>
+          <el-checkbox-group v-model='checkList.parking' class='chkGroup'>
+            <el-checkbox label='已采集' value='yes' @change='checked=>checkPoint(checked, "yes", "parking")'></el-checkbox>
+            <el-checkbox label='未采集' value='no' @change='checked=>checkPoint(checked, "no", "parking")'></el-checkbox>
+          </el-checkbox-group>
+        </div>
+        <div>
+          <span>直饮水点：</span>
+          <el-checkbox-group v-model='checkList.drinkingwater' class='chkGroup'>
+            <el-checkbox label='已采集' value='yes'
+                         @change='checked=>checkPoint(checked, "yes", "drinkingwater")'></el-checkbox>
+            <el-checkbox label='未采集' value='no'
+                         @change='checked=>checkPoint(checked, "no", "drinkingwater")'></el-checkbox>
+          </el-checkbox-group>
+        </div>
+        <div>
+          <span>劳动者港湾：</span>
+          <el-checkbox-group v-model='checkList.labourer' class='chkGroup'>
+            <el-checkbox label='已采集' value='yes'
+                         @change='checked=>checkPoint(checked, "yes", "labourer")'></el-checkbox>
+            <el-checkbox label='未采集' value='no' @change='checked=>checkPoint(checked, "no", "labourer")'></el-checkbox>
+          </el-checkbox-group>
+        </div>
+        <div>
+          <span>人行天桥：</span>
+          <el-checkbox-group v-model='checkList.footbridge' class='chkGroup'>
+            <el-checkbox label='已采集' value='yes'
+                         @change='checked=>checkPoint(checked, "yes", "footbridge")'></el-checkbox>
+            <el-checkbox label='未采集' value='no'
+                         @change='checked=>checkPoint(checked, "no", "footbridge")'></el-checkbox>
+          </el-checkbox-group>
+        </div>
+        <div>
+          <span>地下通道：</span>
+          <el-checkbox-group v-model='checkList.underpress' class='chkGroup'>
+            <el-checkbox label='已采集' value='yes'
+                         @change='checked=>checkPoint(checked, "yes", "underpress")'></el-checkbox>
+            <el-checkbox label='未采集' value='no'
+                         @change='checked=>checkPoint(checked, "no", "underpress")'></el-checkbox>
+          </el-checkbox-group>
+        </div>
+      </div>
+    </div>
     <div class='tools'>
       <div class='myLocation'>
         <span class='normal'></span>
@@ -22,6 +82,15 @@ export default {
   name: 'coordLocation',
   data: function() {
     return {
+      checkList: {
+        wc: [],
+        park: [],
+        parking: [],
+        drinkingwater: [],
+        labourer: [],
+        footbridge: [],
+        underpress: []
+      },
       formatted_addresses: '推荐地址',
       address: '地址',
       curPosition: [0, 0],
@@ -33,7 +102,20 @@ export default {
         labourer: [],
         footbridge: [],
         underpress: []
-      }
+      },
+      gyroscopeAngle: 0
+    }
+  },
+  methods: {
+    checkPoint(type, val, item) {
+      this.datas[item].forEach(item => {
+        if (val === 'yes') {
+          if (item.isCollection) item.show = type
+        } else {
+          if (!item.isCollection) item.show = type
+        }
+        // item.show = this.checkList.indexOf(item.type) > -1
+      })
     }
   },
   mounted: function() {
@@ -51,18 +133,20 @@ export default {
       fullscreenButton: false, // 是否显示全屏按钮
       timeline: false, // 是否显示时间线控件
       animation: false, // 是否显示动画控件
+      // sceneMode: Cesium.SceneMode.SCENE2D, //使用earthsdk切换3d视角要加上这句
       selectionIndicator: true, // 取消点击有绿框
       shouldAnimate: true, // 允许动画
-      sceneModePicker: false, // 是否显示3D/2D选择器
-      navigationInstructionsInitiallyVisible: false,
+      sceneModePicker: true, // 是否显示3D/2D选择器
+      navigationInstructionsInitiallyVisible: false
       // navigation: false,
-      scene3DOnly: true // 如果设置为true，则所有几何图形以3D模式绘制以节约GPU资源
+      // scene3DOnly: true // 如果设置为true，则所有几何图形以3D模式绘制以节约GPU资源（这个设置未true切换3d/2d的组件不会显示出来）
       // terrainProvider: Cesium.createWorldTerrain(),
       // imageryProvider: new Cesium.TileMapServiceImageryProvider({
       //   url: 'http://183.230.114.154:9010/map/staticResources/Cesium-1.85/Build/Cesium/Assets/Textures/NaturalEarthII/'
       // })
     })
     window._viewer = viewer
+    viewer.sceneModePicker.viewModel.duration = 0.0
     viewer.homeButton.viewModel.command.beforeExecute.addEventListener(function(e) {
       e.cancel = true
       // 你要飞的位置
@@ -138,7 +222,7 @@ export default {
     //   show: true
     // }))
 
-    let myLocationEntity = void 0
+    let myLocationEntity = void 0;
 
     function getLocation(callback) {
       getCurrentLocation(function(position) {
@@ -151,7 +235,11 @@ export default {
           billboard: {
             width: 30,
             height: 30,
-            image: 'data:image/png;base64,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',
+            rotation: new Cesium.CallbackProperty(function() {
+              return Cesium.Math.toRadians(Number(_this.gyroscopeAngle))
+            }, false),
+            // image: 'data:image/png;base64,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',
+            image: 'data:image/png;base64,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',
             eyeOffset: new Cesium.ConstantProperty(new Cesium.Cartesian3(0, 0, 0)),
             heightReference: Cesium.HeightReference.CLAMP_TO_GROUND, //绝对贴地
             clampToGround: true,
@@ -194,7 +282,7 @@ export default {
     })
 
     setInterval(() => {
-      // getLocation()
+      getLocation()
     }, 3000)
 
     fetch('./data/cityinfo_eight_parts.json').then(response => response.json()).then(data => {
@@ -207,13 +295,14 @@ export default {
               return coord
             })
             if (cords && cords.length != 2) {
-              console.log(feature[name])
+              console.log(feature['name'])
               return
             }
             let gcj02towgs = gcj02towgs84(cords[0], cords[1])
             let pointEntity = viewer.entities.add({
               show: false,
               name: feature['name'],
+              isCollection: feature.isCollection,
               position: Cesium.Cartesian3.fromDegrees(gcj02towgs[0], gcj02towgs[1]),
               description: `<table>
 <tr><td>序号</td><td>${feature['序号']}</td></tr>
@@ -242,7 +331,11 @@ export default {
               //   disableDepthTestDistance: Number.POSITIVE_INFINITY //元素在正上方
               // }
             })
-            _this.datas[feature.type].push(pointEntity)
+            try {
+              _this.datas[feature.type].push(pointEntity)
+            } catch (e) {
+              console.log(feature)
+            }
           }
           // let coordinates = feature.geometry.coordinates[0];
           // let c = coordinates.map(item => {
@@ -251,7 +344,54 @@ export default {
         })
       }
     })
-    console.log(_this.datas)
+    let ua = navigator.userAgent.toLowerCase();
+    if (window.DeviceOrientationEvent) {
+      if (/android/.test(ua)) {
+        window.addEventListener('deviceorientationabsolute', function(event) {
+          let angle = event.webkitCompassHeading
+            ? event.webkitCompassHeading
+            : event.alpha
+          if (angle >= 0) {
+            _this.gyroscopeAngle = Number(angle)
+          }
+        })
+      }else {
+        if (typeof DeviceOrientationEvent.requestPermission === "function") {
+          window.DeviceOrientationEvent.requestPermission().then((state) => {
+            switch (state) {
+              case "granted":
+                window.addEventListener(
+                  "deviceorientation",
+                  function(event) {
+                    _this.gyroscopeAngle = 360 - event.webkitCompassHeading;
+                  },
+                  false
+                );
+                break;
+              case "denied":
+                alert("您拒绝了使用陀螺仪");
+                break;
+              case "prompt":
+                alert("获取陀螺仪权限失败");
+                break;
+            }
+          });
+        } else {
+          // non iOS 13+
+          window.addEventListener(
+            "deviceorientation",
+            function (event) {
+              // iOS设备直接使用webkitCompassHeading
+              if (event.webkitCompassHeading) {
+                // 由于实际是指北的，需要反转角度，下同
+                _this.gyroscopeAngle = 360 - event.webkitCompassHeading;
+              }
+            },
+            true
+          );
+        }
+      }
+    }
   }
 }
 </script>
@@ -261,6 +401,29 @@ export default {
   width: 100%;
   height: 100%;
   position: relative;
+}
+
+.buts {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  /*width: 100%;*/
+  /*height: 100%;*/
+  z-index: 1;
+  /*background: rgba(0, 0, 0, 0.5);*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.chkGroup {
+  display: inline-block;
+}
+
+.chkGroup .el-checkbox {
+  color: #fff;
+  margin-right: 15px;
 }
 
 .tools {
