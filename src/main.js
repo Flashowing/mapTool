@@ -8,14 +8,14 @@ import Clipboard from 'v-clipboard'
 import 'element-ui/lib/theme-chalk/index.css'
 import { VueJsonp } from 'vue-jsonp'
 import * as Cesium from 'cesium'
-import { Button } from 'vant';
+
 window.Cesium = Cesium
 Vue.config.productionTip = false
 
 Vue.use(VueJsonp)
 Vue.use(Clipboard)
 Vue.use(ElementUI)
-app.use(Button)
+
 new Vue({
   router,
   store,

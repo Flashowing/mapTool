@@ -1,68 +1,80 @@
 <template>
   <div id='cesiumContainer'>
-    <div class='buts'>
+    <div class='sideBtns'>
       <div>
+        <van-button round is-link @click='showPopup'>图层</van-button>
         <div>
-          <span>公厕：</span>
-          <el-checkbox-group v-model='checkList.wc' class='chkGroup'>
-            <el-checkbox label='已采集' value='yes' @change='checked=>checkPoint(checked, "yes", "wc")'></el-checkbox>
-            <el-checkbox label='未采集' value='no' @change='checked=>checkPoint(checked, "no", "wc")'></el-checkbox>
-          </el-checkbox-group>
+          <van-popup v-model='butsShow' position='bottom' round get-container='body' :style='{height: "35%"}'>
+            <div class='popContent'>
+              <div>
+                <span>公厕：</span>
+                <el-checkbox-group v-model='checkList.wc' class='chkGroup'>
+                  <el-checkbox label='已采集' value='yes' @change='checked=>checkPoint(checked, "yes", "wc")'></el-checkbox>
+                  <el-checkbox label='未采集' value='no' @change='checked=>checkPoint(checked, "no", "wc")'></el-checkbox>
+                </el-checkbox-group>
+              </div>
+              <div>
+                <span>公园：</span>
+                <el-checkbox-group v-model='checkList.park' class='chkGroup'>
+                  <el-checkbox label='已采集' value='yes'
+                               @change='checked=>checkPoint(checked, "yes", "park")'></el-checkbox>
+                  <el-checkbox label='未采集' value='no' @change='checked=>checkPoint(checked, "no", "park")'></el-checkbox>
+                </el-checkbox-group>
+              </div>
+              <div>
+                <span>停车场：</span>
+                <el-checkbox-group v-model='checkList.parking' class='chkGroup'>
+                  <el-checkbox label='已采集' value='yes'
+                               @change='checked=>checkPoint(checked, "yes", "parking")'></el-checkbox>
+                  <el-checkbox label='未采集' value='no'
+                               @change='checked=>checkPoint(checked, "no", "parking")'></el-checkbox>
+                </el-checkbox-group>
+              </div>
+              <!--        <div>-->
+              <!--          <span>直饮水点：</span>-->
+              <!--          <el-checkbox-group v-model='checkList.drinkingwater' class='chkGroup'>-->
+              <!--            <el-checkbox label='已采集' value='yes'-->
+              <!--                         @change='checked=>checkPoint(checked, "yes", "drinkingwater")'></el-checkbox>-->
+              <!--            <el-checkbox label='未采集' value='no'-->
+              <!--                         @change='checked=>checkPoint(checked, "no", "drinkingwater")'></el-checkbox>-->
+              <!--          </el-checkbox-group>-->
+              <!--        </div>-->
+              <!--        <div>-->
+              <!--          <span>劳动者港湾：</span>-->
+              <!--          <el-checkbox-group v-model='checkList.labourer' class='chkGroup'>-->
+              <!--            <el-checkbox label='已采集' value='yes'-->
+              <!--                         @change='checked=>checkPoint(checked, "yes", "labourer")'></el-checkbox>-->
+              <!--            <el-checkbox label='未采集' value='no' @change='checked=>checkPoint(checked, "no", "labourer")'></el-checkbox>-->
+              <!--          </el-checkbox-group>-->
+              <!--        </div>-->
+              <!--        <div>-->
+              <!--          <span>人行天桥：</span>-->
+              <!--          <el-checkbox-group v-model='checkList.footbridge' class='chkGroup'>-->
+              <!--            <el-checkbox label='已采集' value='yes'-->
+              <!--                         @change='checked=>checkPoint(checked, "yes", "footbridge")'></el-checkbox>-->
+              <!--            <el-checkbox label='未采集' value='no'-->
+              <!--                         @change='checked=>checkPoint(checked, "no", "footbridge")'></el-checkbox>-->
+              <!--          </el-checkbox-group>-->
+              <!--        </div>-->
+              <!--        <div>-->
+              <!--          <span>地下通道：</span>-->
+              <!--          <el-checkbox-group v-model='checkList.underpress' class='chkGroup'>-->
+              <!--            <el-checkbox label='已采集' value='yes'-->
+              <!--                         @change='checked=>checkPoint(checked, "yes", "underpress")'></el-checkbox>-->
+              <!--            <el-checkbox label='未采集' value='no'-->
+              <!--                         @change='checked=>checkPoint(checked, "no", "underpress")'></el-checkbox>-->
+              <!--          </el-checkbox-group>-->
+              <!--        </div>-->
+            </div>
+          </van-popup>
         </div>
-        <div>
-          <span>公园：</span>
-          <el-checkbox-group v-model='checkList.park' class='chkGroup'>
-            <el-checkbox label='已采集' value='yes' @change='checked=>checkPoint(checked, "yes", "park")'></el-checkbox>
-            <el-checkbox label='未采集' value='no' @change='checked=>checkPoint(checked, "no", "park")'></el-checkbox>
-          </el-checkbox-group>
-        </div>
-        <div>
-          <span>停车场：</span>
-          <el-checkbox-group v-model='checkList.parking' class='chkGroup'>
-            <el-checkbox label='已采集' value='yes' @change='checked=>checkPoint(checked, "yes", "parking")'></el-checkbox>
-            <el-checkbox label='未采集' value='no' @change='checked=>checkPoint(checked, "no", "parking")'></el-checkbox>
-          </el-checkbox-group>
-        </div>
-        <!--        <div>-->
-        <!--          <span>直饮水点：</span>-->
-        <!--          <el-checkbox-group v-model='checkList.drinkingwater' class='chkGroup'>-->
-        <!--            <el-checkbox label='已采集' value='yes'-->
-        <!--                         @change='checked=>checkPoint(checked, "yes", "drinkingwater")'></el-checkbox>-->
-        <!--            <el-checkbox label='未采集' value='no'-->
-        <!--                         @change='checked=>checkPoint(checked, "no", "drinkingwater")'></el-checkbox>-->
-        <!--          </el-checkbox-group>-->
-        <!--        </div>-->
-        <!--        <div>-->
-        <!--          <span>劳动者港湾：</span>-->
-        <!--          <el-checkbox-group v-model='checkList.labourer' class='chkGroup'>-->
-        <!--            <el-checkbox label='已采集' value='yes'-->
-        <!--                         @change='checked=>checkPoint(checked, "yes", "labourer")'></el-checkbox>-->
-        <!--            <el-checkbox label='未采集' value='no' @change='checked=>checkPoint(checked, "no", "labourer")'></el-checkbox>-->
-        <!--          </el-checkbox-group>-->
-        <!--        </div>-->
-        <!--        <div>-->
-        <!--          <span>人行天桥：</span>-->
-        <!--          <el-checkbox-group v-model='checkList.footbridge' class='chkGroup'>-->
-        <!--            <el-checkbox label='已采集' value='yes'-->
-        <!--                         @change='checked=>checkPoint(checked, "yes", "footbridge")'></el-checkbox>-->
-        <!--            <el-checkbox label='未采集' value='no'-->
-        <!--                         @change='checked=>checkPoint(checked, "no", "footbridge")'></el-checkbox>-->
-        <!--          </el-checkbox-group>-->
-        <!--        </div>-->
-        <!--        <div>-->
-        <!--          <span>地下通道：</span>-->
-        <!--          <el-checkbox-group v-model='checkList.underpress' class='chkGroup'>-->
-        <!--            <el-checkbox label='已采集' value='yes'-->
-        <!--                         @change='checked=>checkPoint(checked, "yes", "underpress")'></el-checkbox>-->
-        <!--            <el-checkbox label='未采集' value='no'-->
-        <!--                         @change='checked=>checkPoint(checked, "no", "underpress")'></el-checkbox>-->
-        <!--          </el-checkbox-group>-->
-        <!--        </div>-->
+        <van-button round :type='btnStatus' @click='switchRoadStreet'>街道</van-button>
       </div>
     </div>
     <div class='tools'>
       <div class='myLocation'>
-        <span class='normal'></span>
+        <!--        <span class='normal'></span>-->
+        <van-icon name='aim' size='22' />
       </div>
       <div class='info'>
         <div class='info_format'>{{ formatted_addresses }}</div>
@@ -77,11 +89,18 @@ import { Viewer } from 'cesium'
 import { getCurrentLocation } from '@/utils/currentLocation'
 import { jsonp } from 'vue-jsonp'
 import { gcj02towgs84, wgs84togcj02 } from '@/utils/transformCoordinate'
+import { Popup } from 'vant'
+import { Icon } from 'vant'
+import Vue from 'vue'
 
+Vue.use(Popup)
+Vue.use(Icon)
 export default {
   name: 'coordLocation',
   data: function() {
     return {
+      btnStatus: 'default',
+      butsShow: false,
       checkList: {
         wc: [],
         park: [],
@@ -103,10 +122,18 @@ export default {
         footbridge: [],
         underpress: []
       },
-      gyroscopeAngle: 0
+      gyroscopeAngle: 0,
+      roadPovider: null
     }
   },
   methods: {
+    showPopup() {
+      this.butsShow = true
+    },
+    switchRoadStreet() {
+      this.roadPovider.show = !this.roadPovider.show;
+      this.roadPovider.show ? this.btnStatus = 'info' : this.btnStatus = 'default'
+    },
     checkPoint(checked, val, type) {
       this.datas[type].forEach(item => {
         if (val === 'yes') {
@@ -182,46 +209,47 @@ export default {
     let tdtUrl = agreement + '//t{s}.tianditu.gov.cn/'
     // 服务负载子域
     let subdomains = ['0', '1', '2', '3', '4', '5', '6', '7']
-    // // 叠加影像服务
-    // let imgMap = new Cesium.UrlTemplateImageryProvider({
-    //   url: tdtUrl + 'DataServer?T=img_w&x={x}&y={y}&l={z}&tk=' + token,
-    //   subdomains: subdomains,
-    //   tilingScheme: new Cesium.WebMercatorTilingScheme(),
-    //   maximumLevel: 18
-    // })
+    // 叠加影像服务
+    let imgMap = new Cesium.UrlTemplateImageryProvider({
+      url: tdtUrl + 'DataServer?T=img_w&x={x}&y={y}&l={z}&tk=' + token,
+      subdomains: subdomains,
+      tilingScheme: new Cesium.WebMercatorTilingScheme(),
+      maximumLevel: 18
+    })
     // viewer.imageryLayers.addImageryProvider(imgMap)
-    //
+
     // 叠加国界服务
-    // let iboMap = new Cesium.UrlTemplateImageryProvider({
-    //   url: tdtUrl + 'DataServer?T=ibo_w&x={x}&y={y}&l={z}&tk=' + token,
-    //   subdomains: subdomains,
-    //   tilingScheme: new Cesium.WebMercatorTilingScheme(),
-    //   maximumLevel: 10
-    // })
+    let iboMap = new Cesium.UrlTemplateImageryProvider({
+      url: tdtUrl + 'DataServer?T=ibo_w&x={x}&y={y}&l={z}&tk=' + token,
+      subdomains: subdomains,
+      tilingScheme: new Cesium.WebMercatorTilingScheme(),
+      maximumLevel: 10
+    })
     // viewer.imageryLayers.addImageryProvider(iboMap)
-    //
-    // let TDT_CVA_W = '//{s}.tianditu.gov.cn/cva_w/wmts?service=wmts&request=GetTile&version=1.0.0' + '&LAYER=cva&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}' + '&style=default.jpg&tk=' + token
-    //
-    // let zhLayer = new Cesium.WebMapTileServiceImageryProvider({
-    //   url: TDT_CVA_W,
-    //   layer: 'cva',
-    //   style: 'default',
-    //   format: 'jpg',
-    //   tileMatrixSetID: 'w',
-    //   maximumLevel: 18
-    // })
+
+    let TDT_CVA_W = agreement + '//{s}.tianditu.gov.cn/cva_w/wmts?service=wmts&request=GetTile&version=1.0.0' + '&LAYER=cva&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}' + '&style=default.jpg&tk=' + token
+
+    let zhLayer = new Cesium.WebMapTileServiceImageryProvider({
+      url: TDT_CVA_W,
+      layer: 'cva',
+      style: 'default',
+      format: 'jpg',
+      tileMatrixSetID: 'w',
+      maximumLevel: 18
+    })
     // viewer.imageryLayers.addImageryProvider(zhLayer)
-    //
-    // viewer.imageryLayers.addImageryProvider(new Cesium.WebMapTileServiceImageryProvider({
-    //   // 影像注记
-    //   url: agreement + '//t{s}.tianditu.com/cia_w/wmts?service=wmts&request=GetTile&version=1.0.0&LAYER=cia&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}&style=default.jpg&tk=' + token,
-    //   subdomains: subdomains,
-    //   layer: 'tdtCiaLayer',
-    //   style: 'default',
-    //   format: 'image/jpeg',
-    //   tileMatrixSetID: 'GoogleMapsCompatible',
-    //   show: true
-    // }))
+
+    this.roadPovider = viewer.imageryLayers.addImageryProvider(new Cesium.WebMapTileServiceImageryProvider({
+      // 影像注记
+      url: agreement + '//t{s}.tianditu.gov.cn/cia_w/wmts?service=wmts&request=GetTile&version=1.0.0&LAYER=cia&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}&style=default.jpg&tk=' + token,
+      subdomains: subdomains,
+      layer: 'tdtCiaLayer',
+      style: 'default',
+      format: 'image/jpeg',
+      tileMatrixSetID: 'GoogleMapsCompatible',
+      show: false
+    }))
+    this.roadPovider.show = false;
 
     // let roadProvider = new Cesium.UrlTemplateImageryProvider({
     //   url: 'http://222.178.182.14:9010/dataserver?x={x}&y={y}&l={z}&t=cva_c',
@@ -275,7 +303,16 @@ export default {
       })
     }
 
-    getLocation()
+    getLocation((position) => {
+      viewer.camera.flyTo({
+        destination: Cesium.Cartesian3.fromDegrees(position[0], position[1], 2500),
+        orientation: {
+          heading: Cesium.Math.toRadians(0),
+          pitch: Cesium.Math.toRadians(-90),
+          roll: Cesium.Math.toRadians(0)
+        }
+      })
+    })
 
     document.querySelector('.myLocation').addEventListener('click', function() {
       getLocation((position) => {
@@ -330,8 +367,7 @@ export default {
                 heightReference: Cesium.HeightReference.CLAMP_TO_GROUND, //	一个属性，指定高度相对于什么
                 horizontalOrigin: Cesium.HorizontalOrigin.CENTER, // 水平原点
                 verticalOrigin: Cesium.VerticalOrigin.BASELINE, // 垂直原点
-                fillColor: Cesium.Color.WHITE, // 指定填充的属性Color
-                backgroundColor: new Cesium.Color(1, 1, 1, 0.7), // 指定背景的属性Color
+                fillColor: Cesium.Color.fromCssColorString(feature.isCollection? "#e1b925": "#FFF"), // 指定填充的属性Color
                 backgroundPadding: new Cesium.Cartesian2(8, 4), // Cartesian2以像素为单位指定水平和垂直背景填充的属性
                 disableDepthTestDistance: Number.POSITIVE_INFINITY // 元素在正上方
               },
@@ -440,25 +476,25 @@ export default {
         })
       } else {
         if (typeof DeviceOrientationEvent.requestPermission === 'function') {
-            window.DeviceOrientationEvent.requestPermission().then((state) => {
-              switch (state) {
-                case 'granted':
-                  window.addEventListener(
-                    'deviceorientation',
-                    function(event) {
-                      _this.gyroscopeAngle = 360 - event.webkitCompassHeading
-                    },
-                    false
-                  )
-                  break
-                case 'denied':
-                  alert('您拒绝了使用陀螺仪')
-                  break
-                case 'prompt':
-                  alert('获取陀螺仪权限失败')
-                  break
-              }
-            })
+          window.DeviceOrientationEvent.requestPermission().then((state) => {
+            switch (state) {
+              case 'granted':
+                window.addEventListener(
+                  'deviceorientation',
+                  function(event) {
+                    _this.gyroscopeAngle = 360 - event.webkitCompassHeading
+                  },
+                  false
+                )
+                break
+              case 'denied':
+                alert('您拒绝了使用陀螺仪')
+                break
+              case 'prompt':
+                alert('获取陀螺仪权限失败')
+                break
+            }
+          })
         } else {
           // non iOS 13+
           window.addEventListener(
@@ -486,6 +522,26 @@ export default {
   position: relative;
 }
 
+.sideBtns {
+  position: absolute;
+  right: 25px;
+  top: 65px;
+  z-index: 1;
+}
+
+.sideBtns button {
+  margin-bottom: 10px;
+}
+
+.sideBtns > div {
+  width: 32px;
+  height: 32px;
+}
+
+.sideBtns .van-button--info {
+  color: #FFFFFF !important;
+}
+
 .buts {
   position: absolute;
   top: 10px;
@@ -500,12 +556,17 @@ export default {
   color: #fff;
 }
 
+.popContent {
+  height: calc(100% - 40px);
+  margin: 20px;
+}
+
 .chkGroup {
   display: inline-block;
 }
 
 .chkGroup .el-checkbox {
-  color: #fff;
+  /*color: #fff;*/
   margin-right: 15px;
 }
 
@@ -523,7 +584,7 @@ export default {
   background-color: #fff;
   text-align: center;
   cursor: pointer;
-  line-height: 30px;
+  line-height: 38px;
   margin-left: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
