@@ -4,6 +4,9 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const fs = require('fs')
 const cesiumSource = 'node_modules/cesium/Build/Cesium'
 
+const { VantResolver } = require('unplugin-vue-components/resolvers');
+const ComponentsPlugin = require('unplugin-vue-components/webpack');
+
 module.exports = {
   publicPath: './',
   assetsDir: './static',
@@ -29,7 +32,10 @@ module.exports = {
         new CopyWebpackPlugin([{ from: path.join(cesiumSource, 'Workers'), to: 'static/Workers' }]),
         new CopyWebpackPlugin([{ from: path.join(cesiumSource, 'Assets'), to: 'static/Assets' }]),
         new CopyWebpackPlugin([{ from: path.join(cesiumSource, 'ThirdParty'), to: 'static/ThirdParty' }]),
-        new CopyWebpackPlugin([{ from: path.join(cesiumSource, 'Widgets'), to: 'static/Widgets' }])
+        new CopyWebpackPlugin([{ from: path.join(cesiumSource, 'Widgets'), to: 'static/Widgets' }]),
+        ComponentsPlugin({
+          resolvers: [VantResolver()],
+        }),
       ]
     } else {
       plugins = [
@@ -39,7 +45,10 @@ module.exports = {
         new CopyWebpackPlugin([{ from: path.join(cesiumSource, 'Workers'), to: 'Workers' }]),
         new CopyWebpackPlugin([{ from: path.join(cesiumSource, 'Assets'), to: 'Assets' }]),
         new CopyWebpackPlugin([{ from: path.join(cesiumSource, 'ThirdParty'), to: 'ThirdParty' }]),
-        new CopyWebpackPlugin([{ from: path.join(cesiumSource, 'Widgets'), to: 'Widgets' }])
+        new CopyWebpackPlugin([{ from: path.join(cesiumSource, 'Widgets'), to: 'Widgets' }]),
+        ComponentsPlugin({
+          resolvers: [VantResolver()],
+        }),
       ]
     }
     return {

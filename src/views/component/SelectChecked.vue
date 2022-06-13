@@ -1,25 +1,25 @@
 <template>
-  <div class="select-checked">
+  <div class='select-checked'>
     <!-- 下拉加多选框 -->
     <el-select
-      v-model="value"
+      :placeholder='placeholder'
+      v-model='value'
       multiple
-      placeholder="请选择"
-      :popper-append-to-body="false"
-      @remove-tag="removeTag"
+      :popper-append-to-body='false'
+      @remove-tag='removeTag'
     >
       <el-option
-        v-for="item in options"
-        :key="item.value"
-        :label="item.label"
-        :value="item.value"
+        v-for='item in options'
+        :key='item.value'
+        :label='item.label'
+        :value='item.value'
       >
-        <el-checkbox v-model="item.check" @change="isChecked(item)">
+        <el-checkbox v-model='item.check' @change='isChecked(item)'>
           {{ item.label }}
         </el-checkbox>
       </el-option>
     </el-select>
-<!--    {{ value }}-->
+    <!--    {{ value }}-->
   </div>
 </template>
 
@@ -28,13 +28,17 @@ export default {
   name: 'SelectChecked',
   components: {},
   props: {
-    options:{
+    options: {
       type: Array
+    },
+    placeholder: {
+      type: String,
+      default: "请选择"
     }
   },
   data() {
     return {
-      value: []
+      value: [],
     }
   },
   methods: {
@@ -49,33 +53,40 @@ export default {
           }
         })
       }
-      this.$emit('selectedVal', this.value)
+      // this.$emit('selectedVal', this.value)
+      this.$emit('selectedVal', item)
     },
     // 多选模式下移除tag时触发
     removeTag(value) {
+      let item;
       this.options.forEach((elm, idx) => {
         if (elm.value == value) {
+        item = elm;
           elm.check = false
         }
       })
-      this.$emit('selectedVal', this.value)
+      // this.$emit('selectedVal', this.value)
+      this.$emit('selectedVal', item)
     }
   }
 }
 </script>
 
-<style lang="scss">
+<style lang='scss'>
 .select-checked {
   .el-select-dropdown.is-multiple .el-select-dropdown__item.selected::after {
     content: '';
   }
+
   .el-checkbox {
     width: 100%;
     padding: 0 30px;
+
     .el-checkbox__label {
       margin-left: 20px;
     }
   }
+
   .el-select-dropdown__item {
     padding: 0;
   }
