@@ -96,4 +96,8 @@ a:focus {
     width: 180px !important;
   }
 }
+
+.cesium-infoBox {
+  width: initial !important;
+}
 </style>

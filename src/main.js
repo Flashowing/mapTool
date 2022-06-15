@@ -10,6 +10,7 @@ import { VueJsonp } from 'vue-jsonp'
 import { Popup } from 'vant'
 import { Icon } from 'vant'
 import { ActionSheet } from 'vant'
+import { Switch } from 'vant';
 import * as Cesium from 'cesium'
 
 window.Cesium = Cesium
@@ -18,6 +19,7 @@ Vue.config.productionTip = false
 Vue.use(Popup)
 Vue.use(Icon)
 Vue.use(ActionSheet)
+Vue.use(Switch)
 
 Vue.use(VueJsonp)
 Vue.use(Clipboard)

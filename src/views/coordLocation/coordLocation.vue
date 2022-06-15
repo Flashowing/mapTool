@@ -6,72 +6,112 @@
         <div>
           <van-popup v-model='butsShow' position='bottom' round get-container='body' :style='{height: "35%"}'>
             <div class='popContent'>
-              <div>
-                <span>公厕：</span>
-                <el-checkbox-group v-model='checkList.wc' class='chkGroup'>
-                  <el-checkbox label='已采集' value='yes'
-                               @change='checked=>checkPoint(checked, "yes", "wc")'></el-checkbox>
-                  <el-checkbox label='未采集' value='no' @change='checked=>checkPoint(checked, "no", "wc")'></el-checkbox>
-                </el-checkbox-group>
-              </div>
-              <div>
-                <span>公园：</span>
-                <el-checkbox-group v-model='checkList.park' class='chkGroup'>
-                  <el-checkbox label='已采集' value='yes'
-                               @change='checked=>checkPoint(checked, "yes", "park")'></el-checkbox>
-                  <el-checkbox label='未采集' value='no'
-                               @change='checked=>checkPoint(checked, "no", "park")'></el-checkbox>
-                </el-checkbox-group>
-              </div>
-              <div>
-                <span>停车场：</span>
-                <el-checkbox-group v-model='checkList.parking' class='chkGroup'>
-                  <el-checkbox label='已采集' value='yes'
-                               @change='checked=>checkPoint(checked, "yes", "parking")'></el-checkbox>
-                  <el-checkbox label='未采集' value='no'
-                               @change='checked=>checkPoint(checked, "no", "parking")'></el-checkbox>
-                </el-checkbox-group>
-              </div>
-              <div>
-                <span>直饮水点：</span>
-                <el-checkbox-group v-model='checkList.drinkingwater' class='chkGroup'>
-                  <el-checkbox label='已采集' value='yes'
-                               @change='checked=>checkPoint(checked, "yes", "drinkingwater")'></el-checkbox>
-                  <el-checkbox label='未采集' value='no'
-                               @change='checked=>checkPoint(checked, "no", "drinkingwater")'></el-checkbox>
-                </el-checkbox-group>
-              </div>
-              <div>
-                <span>劳动者港湾：</span>
-                <el-checkbox-group v-model='checkList.labourer' class='chkGroup'>
-                  <el-checkbox label='已采集' value='yes'
-                               @change='checked=>checkPoint(checked, "yes", "labourer")'></el-checkbox>
-                  <el-checkbox label='未采集' value='no'
-                               @change='checked=>checkPoint(checked, "no", "labourer")'></el-checkbox>
-                </el-checkbox-group>
-              </div>
-              <div>
-                <span>人行天桥：</span>
-                <el-checkbox-group v-model='checkList.footbridge' class='chkGroup'>
-                  <el-checkbox label='已采集' value='yes'
-                               @change='checked=>checkPoint(checked, "yes", "footbridge")'></el-checkbox>
-                  <el-checkbox label='未采集' value='no'
-                               @change='checked=>checkPoint(checked, "no", "footbridge")'></el-checkbox>
-                </el-checkbox-group>
-              </div>
-              <div>
-                <span>地下通道：</span>
-                <el-checkbox-group v-model='checkList.underpress' class='chkGroup'>
-                  <el-checkbox label='已采集' value='yes'
-                               @change='checked=>checkPoint(checked, "yes", "underpress")'></el-checkbox>
-                  <el-checkbox label='未采集' value='no'
-                               @change='checked=>checkPoint(checked, "no", "underpress")'></el-checkbox>
-                </el-checkbox-group>
-              </div>
+              <table>
+                <tr>
+                  <td><span class='popContentTitleSpan'>公厕</span></td>
+                  <td>
+                    <el-checkbox-group v-model='checkList.wc' class='chkGroup'>
+                      <el-checkbox label='已采集' value='yes'
+                                   @change='checked=>checkPoint(checked, "yes", "wc")'></el-checkbox>
+                      <el-checkbox label='未采集' value='no'
+                                   @change='checked=>checkPoint(checked, "no", "wc")'></el-checkbox>
+                    </el-checkbox-group>
+                  </td>
+                </tr>
+                <tr>
+                  <td><span class='popContentTitleSpan'>公园</span></td>
+                  <td>
+                    <el-checkbox-group v-model='checkList.park' class='chkGroup'>
+                      <el-checkbox label='已采集' value='yes'
+                                   @change='checked=>checkPoint(checked, "yes", "park")'></el-checkbox>
+                      <el-checkbox label='未采集' value='no'
+                                   @change='checked=>checkPoint(checked, "no", "park")'></el-checkbox>
+                    </el-checkbox-group>
+                  </td>
+                </tr>
+                <tr>
+                  <td><span class='popContentTitleSpan'>停车场</span></td>
+                  <td>
+                    <el-checkbox-group v-model='checkList.parking' class='chkGroup'>
+                      <el-checkbox label='已采集' value='yes'
+                                   @change='checked=>checkPoint(checked, "yes", "parking")'></el-checkbox>
+                      <el-checkbox label='未采集' value='no'
+                                   @change='checked=>checkPoint(checked, "no", "parking")'></el-checkbox>
+                    </el-checkbox-group>
+                  </td>
+                </tr>
+                <tr>
+                  <td><span class='popContentTitleSpan'>直饮水点</span></td>
+                  <td>
+                    <el-checkbox-group v-model='checkList.drinkingwater' class='chkGroup'>
+                      <el-checkbox label='已采集' value='yes'
+                                   @change='checked=>checkPoint(checked, "yes", "drinkingwater")'></el-checkbox>
+                      <el-checkbox label='未采集' value='no'
+                                   @change='checked=>checkPoint(checked, "no", "drinkingwater")'></el-checkbox>
+                    </el-checkbox-group>
+                  </td>
+                </tr>
+                <tr>
+                  <td><span class='popContentTitleSpan'>劳动者港湾</span></td>
+                  <td>
+                    <el-checkbox-group v-model='checkList.labourer' class='chkGroup'>
+                      <el-checkbox label='已采集' value='yes'
+                                   @change='checked=>checkPoint(checked, "yes", "labourer")'></el-checkbox>
+                      <el-checkbox label='未采集' value='no'
+                                   @change='checked=>checkPoint(checked, "no", "labourer")'></el-checkbox>
+                    </el-checkbox-group>
+                  </td>
+                </tr>
+                <tr>
+                  <td><span class='popContentTitleSpan'>人行天桥</span></td>
+                  <td>
+                    <el-checkbox-group v-model='checkList.footbridge' class='chkGroup'>
+                      <el-checkbox label='已采集' value='yes'
+                                   @change='checked=>checkPoint(checked, "yes", "footbridge")'></el-checkbox>
+                      <el-checkbox label='未采集' value='no'
+                                   @change='checked=>checkPoint(checked, "no", "footbridge")'></el-checkbox>
+                    </el-checkbox-group>
+                  </td>
+                </tr>
+                <tr>
+                  <td><span class='popContentTitleSpan'>地下通道</span></td>
+                  <td>
+                    <el-checkbox-group v-model='checkList.underpress' class='chkGroup'>
+                      <el-checkbox label='已采集' value='yes'
+                                   @change='checked=>checkPoint(checked, "yes", "underpress")'></el-checkbox>
+                      <el-checkbox label='未采集' value='no'
+                                   @change='checked=>checkPoint(checked, "no", "underpress")'></el-checkbox>
+                    </el-checkbox-group>
+                  </td>
+                </tr>
+              </table>
             </div>
           </van-popup>
         </div>
         <van-button round :type='btnStatus' @click='switchRoadStreet'>街道</van-button>
+      </div>
+    </div>
+    <div class='buts'>
+      <div>公厕：<span
+        style='display: inline-block;width: 10px;height: 10px;background-color: #ff0000;border-radius: 15px;'></span>
+      </div>
+      <div>公园：<span
+        style='display: inline-block;width: 10px;height: 10px;background-color: #ffca00;border-radius: 15px;'></span>
+      </div>
+      <div>停车场：<span
+        style='display: inline-block;width: 10px;height: 10px;background-color: #87cefa;border-radius: 15px;'></span>
+      </div>
+      <div>直饮水点：<span
+        style='display: inline-block;width: 10px;height: 10px;background-color: #e0ffff;border-radius: 15px;'></span>
+      </div>
+      <div>劳动者港湾：<span
+        style='display: inline-block;width: 10px;height: 10px;background-color: #5adc36;border-radius: 15px;'></span>
+      </div>
+      <div>人行天桥：<span
+        style='display: inline-block;width: 10px;height: 10px;background-color: #ffb6c1;border-radius: 15px;'></span>
+      </div>
+      <div>地下通道：<span
+        style='display: inline-block;width: 10px;height: 10px;background-color: #0051ff;border-radius: 15px;'></span>
       </div>
     </div>
     <div class='tools'>
@@ -104,11 +144,13 @@ import { getCurrentLocation } from '@/utils/currentLocation'
 import { jsonp } from 'vue-jsonp'
 import { gcj02towgs84, wgs84togcj02 } from '@/utils/transformCoordinate'
 import { UploadToCloud } from '@/utils/UploadToCloud'
+import { AroundView } from '@/utils/AroundView'
 
 export default {
   name: 'coordLocation',
   data: function() {
     return {
+      checked: false,
       btnStatus: 'default',
       butsShow: false,
       clusterButsShow: false,
@@ -169,7 +211,7 @@ export default {
     }
   },
   created() {
-    this.cos = new UploadToCloud();
+    this.cos = new UploadToCloud()
   },
   mounted: function() {
     let _this = this
@@ -365,13 +407,13 @@ export default {
     // let footbridge = 'data:image/png;base64,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'
     // let underpress = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAABG5JREFUaEPNmY2xDUEQhc+LABEgAkSACBABIkAEiAARIAJEgAgQASJABNSn9tzq7TuzO7M/9W5XbV33mu3p0336Z+adaTu5LumOpFuDyiuSeJAfw8O/P0n6IOnrFlufrVSCgU8l3ZV0sVPXb0nvJT0P4DpVSEsB4O1Hkh5071h+4c1SIEsA4PFnGxme1aCXiDRLDwAo8i5wvHmTzoXkyD1JUGxWWgFAmY+B55+HZPQGjyVdmN1tvOCPpJfhJ5L/5vAd42+3JHoLgGw8e1xNiYch5ESPvJIEcAsF4Xv4Dogbcwk+BwDa4HlARMnvwV1yo0fges6lv0kBpZZIVOk0BwDjXdfPAwB7khOAKMoUAML7QtLPEEZzdO8IkGMItLos6UnKlwOYGgBe/DIYH+ljnu4JIOcXNAJEMR9qAGgs9yXhiUwheLongKwbChH5t6XGWQJA4lIN+DwlACQy0RkldAmAuQ/PTgkA9hzlQgkA3DfvTw0A+UAuTCZxrMWnBgDDR07PESBhqf2WDIC8+FXoxE76nkaWk9IV7lLiuZPYuukJ/PZfWqoJxnEgQQDIQyiZ5V2r15wHrBsdUBfjbCCg8sg+6uAZAEahhM+mabDH5SvXEn1AAu4AqlRzMT5OiSv33fR1KiQgDr2pBIAkBsApRgAA2DwJgK5XHZ429WefMh+oRoWl1rbpeISKW4ZTEG4xoDYTwiQAH0wocczq8YBxnkBwKPYwn01WoThGxJdKxnMkxCuEthYpRnHWwNlrFQ98GyoLEWfqzJKdORonMoUooYwSiEtp7eokNqJaI+Nw7n5BUSidm9244t4RBLpdQvmdUeJwKVaahWobZc/EM20LAOjom7qoaw5AXEvURxdoJQCtYwGhhxoopLnUwk8E84gSjXooiT1bLgaOzgQlAFObeWN4iLjhwV+8yxEUwVMkHaH2WGAgJCJi7vtmAkewhqeWLyP6oKR2ImM+KXmUd6gC/B8J6lsFPnnHV470EcAA1ADIBdaZ0xjKRRkUspB/5E2p+gE4345UAbREIZaz2rVKnBzzVGmjoxPztUqk2mgKLb2ck7S2odeRxHidpLfnsw68CR3wHnTLUYVqpgxriEhJaGTQ9EimrlXgNBx26WMzxN+JgGcSwJYutvAa5wuv9bWMDaGrEj3WeG3eh+84yGP3CMTcxVakEnzG268HDUTABmFI6WqRd8gFr80cxkF4F/BUI3TzSUK7IBSp00IhrzG/8QDduXRTV4n8op+JpntG9UKrBwBr3Rvi6WyRdQ0v+RRWvAfK789RKK4n2UyfBjtWLXFzm1XSAwBlVAKi0Pu3gFlDhgWuSp6fZt/rBYBCEoy86P17wJwxJDp6u06CSwDYELjKhkRlaUQ8kruTz4Hs6gOtyjzqkiO5ztd0UHahIs8qWROB0sYtk2xTdWlFtTWAWHJLNmxqPBvsAQC9peFutim1ej2u2wsAe8RhsHRJvMTeXZK4ZkicoybnmTVI9oyAo8DnbvPT3gDiuL3G0dV3/wGaKxtAhHv6fgAAAABJRU5ErkJggg=='
 
-    let wc = Cesium.Color.RED;
-    let parking = Cesium.Color.AQUA;
-    let park = Cesium.Color.BLACK;
-    let labourer = Cesium.Color.CHARTREUSE;
-    let drinkingwater = Cesium.Color.CYAN;
-    let footbridge = Cesium.Color.YELLOW;
-    let underpress = Cesium.Color.BLUE;
+    let wc = Cesium.Color.RED
+    let parking = Cesium.Color.LIGHTSKYBLUE
+    let park = Cesium.Color.YELLOW
+    let labourer = Cesium.Color.GREEN
+    let drinkingwater = Cesium.Color.CYAN
+    let footbridge = Cesium.Color.LIGHTPINK
+    let underpress = Cesium.Color.BLUE
 
     fetch('./data/cityinfo_eight_parts.json').then(response => response.json()).then(data => {
       for (const dataKey in data) {
@@ -437,7 +479,7 @@ export default {
         dataSourcePromise.then(function(dataSource) {
           let pixelRange = 15 // 代码中pixelRange是聚合距离，也就是小于这个距离就会被聚合
           let minimumClusterSize = 3 // 是每个聚合点的最小聚合个数，这个值最好是设置为2，因为两个图标也可能叠压
-          let enabled = false;
+          let enabled = false
 
           dataSource.clustering.enabled = enabled
           dataSource.clustering.pixelRange = pixelRange
@@ -622,7 +664,6 @@ export default {
   /*height: 100%;*/
   z-index: 1;
   /*background: rgba(0, 0, 0, 0.5);*/
-  display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
@@ -631,6 +672,17 @@ export default {
 .popContent {
   height: calc(100% - 40px);
   margin: 20px;
+}
+
+.popContent td {
+  text-align: center;
+  text-align: justify;
+  text-justify: distribute-all-lines;
+  text-align-last: justify
+}
+
+.popContent .popContentTitleSpan {
+  margin-right: 10px;
 }
 
 .chkGroup {
