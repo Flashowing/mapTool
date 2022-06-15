@@ -233,12 +233,12 @@ export default {
       selectionIndicator: true, // 取消点击有绿框
       shouldAnimate: true, // 允许动画
       sceneModePicker: true, // 是否显示3D/2D选择器
-      navigationInstructionsInitiallyVisible: false
+      navigationInstructionsInitiallyVisible: false,
       // navigation: false,
       // scene3DOnly: true // 如果设置为true，则所有几何图形以3D模式绘制以节约GPU资源（这个设置未true切换3d/2d的组件不会显示出来）
       // terrainProvider: Cesium.createWorldTerrain(),
       // imageryProvider: new Cesium.TileMapServiceImageryProvider({
-      //   url: 'http://183.230.114.154:9010/map/staticResources/Cesium-1.85/Build/Cesium/Assets/Textures/NaturalEarthII/'
+      //   url: 'https://360.fupeijun.com/Cesium-1.85/Build/Cesium/Assets/Textures/NaturalEarthII/'
       // })
     })
     window._viewer = viewer
@@ -272,7 +272,7 @@ export default {
     })
     viewer.scene.globe.depthTestAgainstTerrain = false
 
-    let token = 'c6a366fc893103a30164aef8a5a298f7'
+    let token = '5137e3e1ef4bc7d839d6ce2bbdf42967'
     // 服务域名
     let tdtUrl = agreement + '//t{s}.tianditu.gov.cn/'
     // 服务负载子域
@@ -284,7 +284,7 @@ export default {
       tilingScheme: new Cesium.WebMercatorTilingScheme(),
       maximumLevel: 18
     })
-    // viewer.imageryLayers.addImageryProvider(imgMap)
+    viewer.imageryLayers.addImageryProvider(imgMap)
 
     // 叠加国界服务
     let iboMap = new Cesium.UrlTemplateImageryProvider({
