@@ -16,7 +16,7 @@
       "详细地址": "重庆市北碚区复兴街道复兴老街农业银行对面",
       "lnglat": "106.560742,29.814413",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "3",
@@ -25,7 +25,7 @@
       "详细地址": "重庆市北碚区复兴街道复兴西街大码头",
       "lnglat": "106.559701,29.815631",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "4",
@@ -34,7 +34,7 @@
       "详细地址": "重庆市北碚区复兴街道复兴西街复兴西街新苗幼儿园旁",
       "lnglat": "106.559542,29.814049",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "5",
@@ -349,7 +349,7 @@
       "详细地址": "重庆市北碚区施家梁镇陵峡路15号附近",
       "lnglat": "106.476982,29.785338",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "40",
@@ -358,7 +358,7 @@
       "详细地址": "重庆市北碚区施家梁镇陵峡南路景通驾校旁　",
       "lnglat": "106.476681,29.784318　",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "41",
@@ -367,7 +367,7 @@
       "详细地址": "重庆市北碚区施家梁镇农村商业银行附近　",
       "lnglat": "106.478547,29.782532　",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "42",
@@ -376,7 +376,7 @@
       "详细地址": "　重庆市北碚区施家梁镇施家街入口处",
       "lnglat": "106.482106,29.781204　",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "43",
@@ -673,7 +673,7 @@
       "详细地址": "重庆市北碚区蔡家岗街道蔡家横街三岔路旁",
       "lnglat": "106.474618,29.732251",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "76",
@@ -691,7 +691,7 @@
       "详细地址": "重庆市北碚区蔡家岗街道嘉运一路30号东北方向30米",
       "lnglat": "106.474248,29.728499",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "78",
@@ -700,7 +700,7 @@
       "详细地址": "重庆市北碚区蔡家岗街道蔡家中央森林公园内",
       "lnglat": "106.494380,29.734160",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "79",
@@ -736,7 +736,7 @@
       "详细地址": "重庆市北碚区蔡家岗街道蔡家横街蔡家农贸市场内",
       "lnglat": "106.475080,29.732119",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "83",
@@ -754,7 +754,7 @@
       "详细地址": "重庆市北碚区蔡家岗街道金科幸福里农贸市场内",
       "lnglat": "106.506894,29.718335",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "85",
@@ -763,7 +763,7 @@
       "详细地址": "重庆市北碚区童家溪镇同兴北路天城社区三溪口还建房小区",
       "lnglat": "106.456678,29.728422",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "86",
@@ -1393,7 +1393,7 @@
       "详细地址": "重庆市北碚区水土街道水土镇云汉大道两江云顶大酒店南",
       "lnglat": "106.531445,29.801266",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "156",
@@ -1402,7 +1402,7 @@
       "详细地址": "重庆市北碚区水土街道云兴公园志愿者服务站旁　",
       "lnglat": "106.527581,29.799068　",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "157",
@@ -1411,7 +1411,7 @@
       "详细地址": "重庆市北碚区水土街道云顶山公园山顶广场旁　",
       "lnglat": "106.532055,29.801526　",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "158",
@@ -1420,7 +1420,7 @@
       "详细地址": "重庆市北碚区水土街道飞马李子坡公园儿童活动区附近",
       "lnglat": "106.513174,29.795981",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "159",
@@ -1429,7 +1429,7 @@
       "详细地址": "重庆市北碚区水土街道方正大道与竹溪路中段交叉口往西北约110米",
       "lnglat": "106.540292,29.805591",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "160",
@@ -1438,7 +1438,7 @@
       "详细地址": "重庆市北碚区水土街道云汉大道交瑞和路口",
       "lnglat": "106.531489,29.810706",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "161",
@@ -1447,7 +1447,7 @@
       "详细地址": "重庆市北碚区水土街道万寿公租房",
       "lnglat": "106.529107,29.819726",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "162",
@@ -1456,7 +1456,7 @@
       "详细地址": "重庆市北碚区水土街道水土公司",
       "lnglat": "106.529626,29.801531",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "163",
@@ -1465,7 +1465,7 @@
       "详细地址": "重庆市北碚区水土街道兴源大道93号",
       "lnglat": "106.536154,29.837692",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "164",
@@ -1474,7 +1474,7 @@
       "详细地址": "重庆市北碚区水土街道云计算云中街商业街B区",
       "lnglat": "106.531457,29.805377",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "165",
@@ -1483,7 +1483,7 @@
       "详细地址": "重庆市北碚区复兴街道思缘公园羽毛球场旁　",
       "lnglat": "106.561981,29.796672　",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "166",
@@ -1492,7 +1492,7 @@
       "详细地址": "重庆市北碚区复兴街道思缘公园荷花池管理用房旁　",
       "lnglat": "106.561893,29.800133　",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "167",
@@ -1501,7 +1501,7 @@
       "详细地址": "　重庆市北碚区复兴街道思缘公园半山腰",
       "lnglat": "106.562377,29.803041　",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "168",
@@ -1510,7 +1510,7 @@
       "详细地址": "重庆市北碚区复兴街道思缘公园观佛禅寺寺庙内厕所",
       "lnglat": "106.561393,29.797997　",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "169",
@@ -1519,7 +1519,7 @@
       "详细地址": "重庆市北碚区复兴街道和丰家园",
       "lnglat": "106.537613,29.818181",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "170",
@@ -1528,7 +1528,7 @@
       "详细地址": "重庆市北碚区复兴街道方正大道润之康医院",
       "lnglat": "106.54014,29.809001",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "171",
@@ -1537,7 +1537,7 @@
       "详细地址": "重庆市北碚区复兴街道悦复大道复兴街道体育文化公园",
       "lnglat": "106.561962,29.812004",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "172",
@@ -1546,7 +1546,7 @@
       "详细地址": "重庆市北碚区复兴街道和源临时菜市",
       "lnglat": "106.555106,29.803176",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "173",
@@ -1555,7 +1555,7 @@
       "详细地址": "重庆市北碚区复兴街道悦复大道加油站",
       "lnglat": "106.540827,29.76718",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "174",
@@ -1564,7 +1564,7 @@
       "详细地址": "重庆市北碚区复兴街道和泰家园300号商业街",
       "lnglat": "106.554504,29.786834",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "175",
@@ -1582,7 +1582,7 @@
       "详细地址": "重庆市北碚区复兴街道龙门社区旁",
       "lnglat": "106.55691,29.804711",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "177",
@@ -1591,7 +1591,7 @@
       "详细地址": "重庆市北碚区水土街道兴源大道93号",
       "lnglat": "106.536154,29.837692",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "178",
@@ -1600,7 +1600,7 @@
       "详细地址": "重庆市北碚区水土街道云计算云中街商业街B区",
       "lnglat": "106.531457,29.805377",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "179",
@@ -1609,7 +1609,7 @@
       "详细地址": "重庆市北碚区歇马街道碚青路靠近小磨滩小学",
       "lnglat": "106.35462000141113,29.746090169763413",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "180",
@@ -1618,7 +1618,7 @@
       "详细地址": "重庆市北碚区歇马街道歇马路456号靠近卫星村支部委员会",
       "lnglat": "106.36230300774433,29.75619070892337",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "181",
@@ -1627,7 +1627,7 @@
       "详细地址": "重庆市北碚区歇马街道歇马路456号靠近卫星村支部委员会",
       "lnglat": "106.36230300774433,29.75619070892337",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "182",
@@ -1636,7 +1636,7 @@
       "详细地址": "重庆市北碚区歇马街道歇马路456号靠近卫星村支部委员会",
       "lnglat": "106.36230300774433,29.75619070892337",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "183",
@@ -1645,7 +1645,7 @@
       "详细地址": "重庆市北碚区歇马街道歇马路456号靠近卫星村支部委员会",
       "lnglat": "　106.36230300774433,29.75619070892337",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "184",
@@ -1654,7 +1654,7 @@
       "详细地址": "重庆市北碚区歇马街道歇马路456号靠近红岩幼儿园",
       "lnglat": "106.36557001218499,29.75881177814307",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "185",
@@ -1663,7 +1663,7 @@
       "详细地址": "重庆市北碚区歇马街道歇马路456号靠近红岩幼儿园",
       "lnglat": "106.36557001218499,29.75881177814307",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "186",
@@ -1672,7 +1672,7 @@
       "详细地址": "重庆市北碚区歇马街道歇马路456号靠近红岩幼儿园",
       "lnglat": "106.36557001218499,29.75881177814307",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "187",
@@ -1681,7 +1681,7 @@
       "详细地址": "重庆市北碚区歇马街道歇马路246号靠近东景花园",
       "lnglat": "106.36671500038611,29.760456738323217",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "188",
@@ -1690,7 +1690,7 @@
       "详细地址": "重庆市北碚区歇马街道歇马街58号靠近中国邮政储蓄",
       "lnglat": "106.36917106725795,29.76393176246658",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "189",
@@ -1699,7 +1699,7 @@
       "详细地址": "重庆市北碚区歇马街道双元大道46号 靠近中国银行",
       "lnglat": "106.40023707234015,29.805573928875408",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "190",
@@ -1708,7 +1708,7 @@
       "详细地址": "重庆市北碚区歇马街道东风街122号靠近歇派出所",
       "lnglat": "106.37277751740827,29.763896901824715",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "191",
@@ -1717,7 +1717,7 @@
       "详细地址": "重庆市北碚区歇马街道626县道靠近柑橘研究所",
       "lnglat": "106.37837026992746,29.760470211772418",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "192",
@@ -1726,7 +1726,7 @@
       "详细地址": "重庆市北碚区歇马街道626县道靠近大磨滩小学",
       "lnglat": "106.39328284997657,29.759059669643886",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "193",
@@ -1735,7 +1735,7 @@
       "详细地址": "重庆市北碚区歇马街道歇蒲路626县道靠近石盘村村委会",
       "lnglat": "106.3982103740178,29.77174819076968",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "194",
@@ -1744,7 +1744,7 @@
       "详细地址": "重庆市北碚区歇马街道歇蒲路626县道靠近石盘村村委会",
       "lnglat": "106.3982103740178,29.77174819076968",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "195",
@@ -1753,7 +1753,7 @@
       "详细地址": "重庆市北碚区歇马街道歇蒲路626县道靠近石盘村村委会",
       "lnglat": "106.3982103740178,29.77174819076968",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "196",
@@ -1795,7 +1795,7 @@
       "序号": "200",
       "管理单位": "静观镇",
       "name": "花园公厕　",
-      "详细地址": "重庆市北碚区静观镇花园组23号附近　",
+      "详细地址": "重庆市北碚区静观镇花园组23号附近",
       "lnglat": "106.568166,29.895666　",
       "type": "wc",
       "isCollection": false
@@ -1804,7 +1804,7 @@
       "序号": "201",
       "管理单位": "静观镇",
       "name": "双巷子公厕　",
-      "详细地址": "重庆市北碚区静观镇静观正街287号附近　",
+      "详细地址": "重庆市北碚区静观镇静观正街287号附近",
       "lnglat": "106.567436,29.894369　",
       "type": "wc",
       "isCollection": false
@@ -1813,7 +1813,7 @@
       "序号": "202",
       "管理单位": "静观镇",
       "name": "猪市堡公厕",
-      "详细地址": "重庆市北碚区静观镇静观正街262号附近　",
+      "详细地址": "重庆市北碚区静观镇静观正街262号附近",
       "lnglat": "106.567667,29.893978　",
       "type": "wc",
       "isCollection": false
@@ -2194,7 +2194,7 @@
       "详细地址": "重庆市北碚区蔡家岗街道三溪口还建房旁",
       "lnglat": "106.458325,29.728896",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "245",
@@ -2203,7 +2203,7 @@
       "详细地址": "重庆市北碚区蔡家岗街道两江民居D 区十字路口",
       "lnglat": "106.49807,29.746386",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "246",
@@ -2221,7 +2221,7 @@
       "详细地址": "重庆市北碚区蔡家岗街道凤栖路中铁18局前　",
       "lnglat": "106.462909,29.728342　",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "248",
@@ -2230,7 +2230,7 @@
       "详细地址": "重庆市北碚区蔡家岗街道嘉运大道蔡家医院对面",
       "lnglat": "106.471141,29.732625",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "249",
@@ -2239,7 +2239,7 @@
       "详细地址": "重庆市北碚区蔡家岗街道同康路花溪公园段　",
       "lnglat": "106.465653,29.714769　",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "250",
@@ -2257,7 +2257,7 @@
       "详细地址": "重庆市北碚区蔡家岗街道同康一路碚都佳园A区门口附近　",
       "lnglat": "106.477584,29.716699　",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "252",
@@ -2266,7 +2266,7 @@
       "详细地址": "重庆市北碚区蔡家岗街道碚都佳园B区外侧",
       "lnglat": "106.480384,29.715688",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "253",
@@ -2275,7 +2275,7 @@
       "详细地址": "重庆市北碚区蔡家岗街道碚都佳园C区物管办公室旁",
       "lnglat": "106.479563,29.714654",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "254",
@@ -2284,7 +2284,7 @@
       "详细地址": "重庆市北碚区蔡家岗街道同康一路碚都佳园D区大门旁",
       "lnglat": "106.476656,29.71307",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "255",
@@ -2473,7 +2473,7 @@
       "详细地址": "重庆市北碚区施家梁文化广场旁",
       "lnglat": "106.476994,29.784961",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "276",
@@ -2572,7 +2572,7 @@
       "详细地址": "重庆市北碚区施家梁镇施家社区",
       "lnglat": "106.476119,29.783969",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "287",
@@ -2867,7 +2867,7 @@
       "详细地址": "歇马缙善花园旁",
       "lnglat": "106.370765,29.759837",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "320",
@@ -2876,7 +2876,7 @@
       "详细地址": "歇马广场旁",
       "lnglat": "106.3689916660038,29.763492377267518",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "321",
@@ -2903,7 +2903,7 @@
       "详细地址": "水土和悦家园",
       "lnglat": "106.50886584411187,29.794947212707868",
       "type": "wc",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "324",
@@ -3331,7 +3331,7 @@
       "序号": "25",
       "name": "老财政局停车场",
       "点位地址": "北碚区老财政局支路",
-      "lnglat": "106.39570707553742,29.80536901122634",
+      "lnglat": "106.386666,29.799426",
       "管理单位": "重庆缙融资本运营有限公司",
       "商圈内/外）": "外",
       "收费免费": "免费",
@@ -3373,7 +3373,7 @@
       "车位数（个）": "19",
       "联系人及电话": "潘毅13983633309",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "28",
@@ -3389,7 +3389,7 @@
       "车位数（个）": "50",
       "联系人及电话": "潘毅13983633309",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "29",
@@ -3405,7 +3405,7 @@
       "车位数（个）": "29",
       "联系人及电话": "潘毅13983633309",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "30",
@@ -3421,7 +3421,7 @@
       "车位数（个）": "37",
       "联系人及电话": "潘毅13983633309",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     }
   ],
   "公共停车场明细": [
@@ -3480,7 +3480,7 @@
       "收费情况（是/否）": "是",
       "联系人及电话": " 袁柳松13883841097",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "4",
@@ -3594,7 +3594,7 @@
       "收费情况（是/否）": "是",
       "联系人及电话": " 熊伟13667655300",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "10",
@@ -3613,7 +3613,7 @@
       "收费情况（是/否）": "是",
       "联系人及电话": " 王洪章13908308548",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "11",
@@ -3898,7 +3898,7 @@
       "收费情况（是/否）": "是",
       "联系人及电话": "谭木强 15123035577",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "26",
@@ -3917,7 +3917,7 @@
       "收费情况（是/否）": "是",
       "联系人及电话": " 李君国18908367057",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "27",
@@ -4031,7 +4031,7 @@
       "收费情况（是/否）": "是",
       "联系人及电话": "陈立兵15902360052",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "33",
@@ -4126,7 +4126,7 @@
       "收费情况（是/否）": "是",
       "联系人及电话": "苟洪13708337090",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "38",
@@ -4183,7 +4183,7 @@
       "收费情况（是/否）": "是",
       "联系人及电话": "杨秀波18084057180",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "41",
@@ -4316,7 +4316,7 @@
       "收费情况（是/否）": "是",
       "联系人及电话": "陈洪梅19923135719",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "48",
@@ -4449,7 +4449,7 @@
       "收费情况（是/否）": "是",
       "联系人及电话": "023-68202800",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "55",
@@ -4468,7 +4468,7 @@
       "收费情况（是/否）": "是",
       "联系人及电话": "023-68225599",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     }
   ],
   "配建停车场明细": [
@@ -4506,7 +4506,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "饶金春13883161515",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "3",
@@ -4524,7 +4524,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "刘伟13996055532",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "4",
@@ -4614,7 +4614,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "刘大群13368389133",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "9",
@@ -4632,7 +4632,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "杨秀波15023002513",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "10",
@@ -4650,7 +4650,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "杨秀波15023002513",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "11",
@@ -4722,7 +4722,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "张凤13667695886",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "15",
@@ -4938,7 +4938,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "朱虹13983999016",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "27",
@@ -4992,7 +4992,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "刁云霞68863423",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "30",
@@ -5010,7 +5010,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "张方敏13883372068",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "31",
@@ -5028,7 +5028,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "王兵18696918632",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "32",
@@ -5118,7 +5118,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "刘燕陵15123998787",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "37",
@@ -5532,7 +5532,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "刘玉淑13808309805",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "60",
@@ -5550,7 +5550,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "张方敏13883372068",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "61",
@@ -5568,7 +5568,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "卢建全13908390488",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "62",
@@ -5604,7 +5604,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "王强18908382906",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "64",
@@ -5622,7 +5622,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "王强18908382906",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "65",
@@ -5640,7 +5640,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "王强18908382906",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "66",
@@ -5766,7 +5766,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "陈龙议13638306699",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "73",
@@ -5784,7 +5784,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "陈龙议13638306699",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "74",
@@ -5838,7 +5838,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "吴康13228617008",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "77",
@@ -5964,7 +5964,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "邓君13399811580",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "84",
@@ -5982,7 +5982,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "马镇平18584503188",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "85",
@@ -6324,7 +6324,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "吴康13228617008",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "104",
@@ -6342,7 +6342,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "罗世英13635455880",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "105",
@@ -6432,7 +6432,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "王淞13983240359",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "110",
@@ -6486,7 +6486,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "张波13594391839",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "113",
@@ -6522,7 +6522,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "王雅丽13399893299",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "115",
@@ -6576,7 +6576,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "田永伟13708383188",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "118",
@@ -6612,7 +6612,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "张波13594391839",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "120",
@@ -6630,7 +6630,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "田世超13594301782",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "121",
@@ -6702,7 +6702,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "邓君13399811580",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "125",
@@ -6720,7 +6720,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "沈园园15826051690",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "126",
@@ -6738,7 +6738,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "熊维治13330336568",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "127",
@@ -6756,7 +6756,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "熊维治13330336568",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "128",
@@ -6774,7 +6774,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "颜皓13452866673",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "129",
@@ -6792,7 +6792,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "颜皓13452866673",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "130",
@@ -6810,7 +6810,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "颜皓13452866673",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "131",
@@ -6828,7 +6828,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "徐雪峰15023016717",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "132",
@@ -6846,7 +6846,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "熊维治13330336568",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "133",
@@ -6864,7 +6864,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "喻登力13508353743",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "134",
@@ -6882,7 +6882,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "沈仙荣17384715136",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "135",
@@ -6900,7 +6900,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "沈仙荣17384715136",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "136",
@@ -6918,7 +6918,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "沈仙荣17384715136",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "137",
@@ -6936,7 +6936,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "沈仙荣17384715136",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "138",
@@ -6954,7 +6954,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "沈仙荣17384715136",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "139",
@@ -6972,7 +6972,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "沈仙荣17384715136",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "140",
@@ -6990,7 +6990,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "秦涌校15826347350",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "141",
@@ -7008,7 +7008,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "秦涌校15826347350",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "142",
@@ -7026,7 +7026,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "秦涌校15826347350",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "143",
@@ -7044,7 +7044,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "秦涌校15826347350",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "144",
@@ -7062,7 +7062,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "秦涌校15826347350",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "145",
@@ -7080,7 +7080,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "秦涌校15826347350",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "146",
@@ -7098,7 +7098,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "秦涌校15826347350",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "147",
@@ -7116,7 +7116,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "喻登力13508353743",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "148",
@@ -7134,7 +7134,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "喻登力13508353743",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "149",
@@ -7152,7 +7152,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "喻登力13508353743",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "150",
@@ -7170,7 +7170,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "喻登力13508353743",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "151",
@@ -7188,7 +7188,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "喻登力13508353743",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "152",
@@ -7224,7 +7224,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "曾丽13452185678",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "154",
@@ -7260,7 +7260,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "陈小兰18602349913",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "156",
@@ -7278,7 +7278,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "高长峰15223326162",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "157",
@@ -7314,7 +7314,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "卢建全13908390488",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "159",
@@ -7350,7 +7350,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "李敬芝13508396088",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "161",
@@ -7422,7 +7422,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "高长峰15223326162",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "165",
@@ -7458,7 +7458,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "吕仕华13883991856",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "167",
@@ -7530,7 +7530,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "马奎18323424844",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "171",
@@ -7548,7 +7548,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "倪怀海13452903902",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "172",
@@ -7566,7 +7566,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "刘财娟18623000263",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "173",
@@ -7620,7 +7620,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "徐雪峰15023016717",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "176",
@@ -7638,7 +7638,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "杨秀波15023002513",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "177",
@@ -7728,7 +7728,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "庄石秋13368199931",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "182",
@@ -7890,7 +7890,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "黄燕15923963139",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "191",
@@ -8034,7 +8034,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "倪星灿13368025855",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "199",
@@ -8070,7 +8070,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "张波 13594391839 ",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "201",
@@ -8088,7 +8088,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "张超 18723483526",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "202",
@@ -8106,7 +8106,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "于严13883523515",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "203",
@@ -8124,7 +8124,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "彭庭棡15730123971",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "204",
@@ -8142,7 +8142,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "彭庭棡15730123971",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "205",
@@ -8196,7 +8196,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "陈洪梅 19923134719",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "208",
@@ -8214,7 +8214,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "王昊 13452152597",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "209",
@@ -8232,7 +8232,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "李小琴 15223135829",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "210",
@@ -8250,7 +8250,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "李小琴 15223135829",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "211",
@@ -8304,7 +8304,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "张华琼 15023235292",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "214",
@@ -8322,7 +8322,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "张华琼 15023235292",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "215",
@@ -8340,7 +8340,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "高长峰 15223326161",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "216",
@@ -8358,7 +8358,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "陶燕平17382292389",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "217",
@@ -8394,7 +8394,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "李小琴 15223135829",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "219",
@@ -8412,7 +8412,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "李小琴 15223135829",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "220",
@@ -8430,7 +8430,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "石明亮 13983237174",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "221",
@@ -8448,7 +8448,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "刘海兵 13272754350",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "222",
@@ -8466,7 +8466,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "陈洪梅 19923134719",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "223",
@@ -8538,7 +8538,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "杨科 13212342364 ",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "227",
@@ -8556,7 +8556,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "张伟 17338322226",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "228",
@@ -8592,7 +8592,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "聂平18523189320",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "230",
@@ -8664,7 +8664,7 @@
       "收费情况（是/否）": "是",
       "联系电话": "裴俊18323485603",
       "type": "parking",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "234",
@@ -8838,7 +8838,7 @@
       "是否收费（是/否）": "否",
       "lnglat": "106.493063,29.733109",
       "type": "park",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "10",
@@ -8872,7 +8872,7 @@
       "是否收费（是/否）": "否",
       "lnglat": "106.474624,29.703216",
       "type": "park",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "12",
@@ -8923,7 +8923,7 @@
       "是否收费（是/否）": "否",
       "lnglat": "106.406057,29.811594",
       "type": "park",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "15",
@@ -8955,7 +8955,7 @@
       "建成时间": "2009",
       "是否具有防灾避险功能（是/否）": "是",
       "是否收费（是/否）": "否",
-      "lnglat": "106.44388234755863,29.83028874482008",
+      "lnglat": "106.370611,29.857879",
       "type": "park",
       "isCollection": false
     },
@@ -8982,14 +8982,14 @@
       "代码": "17",
       "公园性质": "综合公园",
       "公园面积（公顷）": "61.13 ",
-      "行政位置": "北温泉街道缙云大道缙云下棋去",
+      "行政位置": "北温泉街道缙云大道",
       "用地性质": "区域绿地",
       "管理机构": "北碚区园林绿化管理处",
       "管理人员数量（人）": "1",
       "建成时间": "2011",
       "是否具有防灾避险功能（是/否）": "否",
       "是否收费（是/否）": "否",
-      "lnglat": "106.39570707553742,29.80536901122634",
+      "lnglat": "106.390212,29.806832",
       "type": "park",
       "isCollection": false
     },
@@ -9059,7 +9059,7 @@
       "是否收费（是/否）": "否",
       "lnglat": "106.53120846355394,29.80121716316766",
       "type": "park",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "23",
@@ -9093,7 +9093,7 @@
       "是否收费（是/否）": "否",
       "lnglat": "106.510258,29.702936",
       "type": "park",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "25",
@@ -9110,7 +9110,7 @@
       "是否收费（是/否）": "否",
       "lnglat": "106.44805989517884,29.760328336615487",
       "type": "park",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "26",
@@ -9144,7 +9144,7 @@
       "是否收费（是/否）": "否",
       "lnglat": "106.563219,29.805522",
       "type": "park",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "28",
@@ -9159,7 +9159,7 @@
       "建成时间": "2019",
       "是否具有防灾避险功能（是/否）": "是",
       "是否收费（是/否）": "否",
-      "lnglat": "106.39570707553742,29.80536901122634",
+      "lnglat": "106.421161,29.83225",
       "type": "park",
       "isCollection": false
     },
@@ -9178,7 +9178,7 @@
       "是否收费（是/否）": "否",
       "lnglat": "106.5442103432887,29.813593164349694",
       "type": "park",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "30",
@@ -9195,7 +9195,7 @@
       "是否收费（是/否）": "否",
       "lnglat": "106.51184448879845,29.794114308249817",
       "type": "park",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "31",
@@ -9212,7 +9212,7 @@
       "是否收费（是/否）": "否",
       "lnglat": "106.472569,29.722259",
       "type": "park",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "32",
@@ -9246,7 +9246,7 @@
       "是否收费（是/否）": "否",
       "lnglat": "106.48339460289891,29.724216766738703",
       "type": "park",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "34",
@@ -9261,7 +9261,7 @@
       "建成时间": "2021",
       "是否具有防灾避险功能（是/否）": "否",
       "是否收费（是/否）": "否",
-      "lnglat": "106.39570707553742,29.80536901122634",
+      "lnglat": "106.416558,29.856799",
       "type": "park",
       "isCollection": false
     },
@@ -9278,9 +9278,9 @@
       "建成时间": "2021",
       "是否具有防灾避险功能（是/否）": "否",
       "是否收费（是/否）": "否",
-      "lnglat": "106.56008844907306,29.880815813790896",
+      "lnglat": "106.405612,29.811135",
       "type": "park",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "37",
@@ -9295,7 +9295,7 @@
       "建成时间": "2014",
       "是否具有防灾避险功能（是/否）": "是",
       "是否收费（是/否）": "否",
-      "lnglat": "106.39570707553742,29.80536901122634",
+      "lnglat": "106.561297,29.880734",
       "type": "park",
       "isCollection": false
     },
@@ -9331,7 +9331,7 @@
       "是否收费（是/否）": "否",
       "lnglat": "106.48351283489978,29.737934898534117",
       "type": "park",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "41",
@@ -9346,7 +9346,7 @@
       "建成时间": "2019",
       "是否具有防灾避险功能（是/否）": "是",
       "是否收费（是/否）": "否",
-      "lnglat": "106.61083011766482,29.87728063747114",
+      "lnglat": "106.385783,29.789932",
       "type": "park",
       "isCollection": false
     },
@@ -9365,7 +9365,7 @@
       "是否收费（是/否）": "否",
       "lnglat": "106.50804602104738,29.717994831196453",
       "type": "park",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "43",
@@ -9382,7 +9382,7 @@
       "是否收费（是/否）": "否",
       "lnglat": "106.4657701675483,29.713149456617572",
       "type": "park",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "44",
@@ -9433,7 +9433,7 @@
       "是否收费（是/否）": "否",
       "lnglat": "106.466944,29.716615",
       "type": "park",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "47",
@@ -9499,7 +9499,7 @@
       "建成时间": "2016",
       "是否具有防灾避险功能（是/否）": "否",
       "是否收费（是/否）": "否",
-      "lnglat": "106.39570707553742,29.80536901122634",
+      "lnglat": "106.508488,29.703042",
       "type": "park",
       "isCollection": false
     },
@@ -9550,7 +9550,7 @@
       "建成时间": "2017",
       "是否具有防灾避险功能（是/否）": "是",
       "是否收费（是/否）": "否",
-      "lnglat": "106.39570707553742,29.80536901122634",
+      "lnglat": "106.455567,29.716034",
       "type": "park",
       "isCollection": false
     },
@@ -9569,7 +9569,7 @@
       "是否收费（是/否）": "否",
       "lnglat": "106.47685980641727,29.785361737776704",
       "type": "park",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "55",
@@ -9586,7 +9586,7 @@
       "是否收费（是/否）": "否",
       "lnglat": "106.3690955391689,29.761774271132516",
       "type": "park",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "56",
@@ -9603,7 +9603,7 @@
       "是否收费（是/否）": "否",
       "lnglat": "106.47679455956151,29.735727180407196",
       "type": "park",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "57",
@@ -9652,7 +9652,7 @@
       "建成时间": "2020",
       "是否具有防灾避险功能（是/否）": "是",
       "是否收费（是/否）": "否",
-      "lnglat": "106.39570707553742,29.80536901122634",
+      "lnglat": "106.483838,29.738641",
       "type": "park",
       "isCollection": false
     },
@@ -9669,7 +9669,7 @@
       "建成时间": "2020",
       "是否具有防灾避险功能（是/否）": "是",
       "是否收费（是/否）": "否",
-      "lnglat": "106.39570707553742,29.80536901122634",
+      "lnglat": "106.483472,29.738482",
       "type": "park",
       "isCollection": false
     },
@@ -9686,7 +9686,7 @@
       "建成时间": "2020",
       "是否具有防灾避险功能（是/否）": "是",
       "是否收费（是/否）": "否",
-      "lnglat": "106.39570707553742,29.80536901122634",
+      "lnglat": "106.483502,29.738488",
       "type": "park",
       "isCollection": false
     },
@@ -9720,7 +9720,7 @@
       "建成时间": "2021",
       "是否具有防灾避险功能（是/否）": "否",
       "是否收费（是/否）": "否",
-      "lnglat": "106.39570707553742,29.80536901122634",
+      "lnglat": "106.488574,29.742943",
       "type": "park",
       "isCollection": false
     },
@@ -9739,7 +9739,7 @@
       "是否收费（是/否）": "否",
       "lnglat": "106.40436218685852,29.821430267959386",
       "type": "park",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "66",
@@ -9771,7 +9771,7 @@
       "建成时间": "1984",
       "是否具有防灾避险功能（是/否）": "是",
       "是否收费（是/否）": "否",
-      "lnglat": "106.39570707553742,29.80536901122634",
+      "lnglat": "106.440682,29.827445",
       "type": "park",
       "isCollection": false
     },
@@ -9788,7 +9788,7 @@
       "建成时间": "1982",
       "是否具有防灾避险功能（是/否）": "是",
       "是否收费（是/否）": "否",
-      "lnglat": "106.39570707553742,29.80536901122634",
+      "lnglat": "106.440286,29.827056",
       "type": "park",
       "isCollection": false
     },
@@ -9822,7 +9822,7 @@
       "建成时间": "2019",
       "是否具有防灾避险功能（是/否）": "否",
       "是否收费（是/否）": "否",
-      "lnglat": "106.40412827295468,29.843774833160083",
+      "lnglat": "106.428894,29.821433",
       "type": "park",
       "isCollection": false
     },
@@ -9924,7 +9924,7 @@
       "建成时间": "2009",
       "是否具有防灾避险功能（是/否）": "否",
       "是否收费（是/否）": "否",
-      "lnglat": "106.450489233463,29.676295486482665",
+      "lnglat": "106.453576,29.820722",
       "type": "park",
       "isCollection": false
     },
@@ -9958,7 +9958,7 @@
       "建成时间": "2007",
       "是否具有防灾避险功能（是/否）": "否",
       "是否收费（是/否）": "否",
-      "lnglat": "106.39570707553742,29.80536901122634",
+      "lnglat": "106.457355,29.725012",
       "type": "park",
       "isCollection": false
     },
@@ -10060,7 +10060,7 @@
       "建成时间": "2009",
       "是否具有防灾避险功能（是/否）": "是",
       "是否收费（是/否）": "否",
-      "lnglat": "106.39570707553742,29.80536901122634",
+      "lnglat": "106.417064,29.81008",
       "type": "park",
       "isCollection": false
     },
@@ -10079,7 +10079,7 @@
       "是否收费（是/否）": "否",
       "lnglat": "106.40328,29.798532",
       "type": "park",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "86",
@@ -10128,7 +10128,7 @@
       "建成时间": "2010",
       "是否具有防灾避险功能（是/否）": "是",
       "是否收费（是/否）": "否",
-      "lnglat": "106.39570707553742,29.80536901122634",
+      "lnglat": "106.438767,29.823233",
       "type": "park",
       "isCollection": false
     },
@@ -10162,7 +10162,7 @@
       "建成时间": "2010",
       "是否具有防灾避险功能（是/否）": "否",
       "是否收费（是/否）": "否",
-      "lnglat": "106.39570707553742,29.80536901122634",
+      "lnglat": "106.444317,29.830315",
       "type": "park",
       "isCollection": false
     },
@@ -10181,7 +10181,7 @@
       "是否收费（是/否）": "否",
       "lnglat": "106.472166,29.732685",
       "type": "park",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "92",
@@ -10213,7 +10213,7 @@
       "建成时间": "2019",
       "是否具有防灾避险功能（是/否）": "是",
       "是否收费（是/否）": "否",
-      "lnglat": "106.40280495050087,29.797828937345187",
+      "lnglat": "106.432458,29.80714",
       "type": "park",
       "isCollection": false
     },
@@ -10232,7 +10232,7 @@
       "是否收费（是/否）": "否",
       "lnglat": "106.43616048506846,29.8321564506088",
       "type": "park",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "95",
@@ -10249,7 +10249,7 @@
       "是否收费（是/否）": "否",
       "lnglat": "106.37074208332521,29.76489891752608",
       "type": "park",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "96",
@@ -10264,7 +10264,7 @@
       "建成时间": "2019",
       "是否具有防灾避险功能（是/否）": "是",
       "是否收费（是/否）": "否",
-      "lnglat": "106.39570707553742,29.80536901122634",
+      "lnglat": "106.395672,29.811601",
       "type": "park",
       "isCollection": false
     },
@@ -10300,7 +10300,7 @@
       "是否收费（是/否）": "否",
       "lnglat": "106.36737996726058,29.763030887713075",
       "type": "park",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "99",
@@ -10332,7 +10332,7 @@
       "建成时间": "2020",
       "是否具有防灾避险功能（是/否）": "否",
       "是否收费（是/否）": "否",
-      "lnglat": "106.34019210596352,29.735836806404038",
+      "lnglat": "106.463625,29.710653",
       "type": "park",
       "isCollection": false
     },
@@ -10351,7 +10351,7 @@
       "是否收费（是/否）": "否",
       "lnglat": "106.47303451502428,29.719892425566496",
       "type": "park",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "102",
@@ -10368,7 +10368,7 @@
       "是否收费（是/否）": "否",
       "lnglat": "106.5042715424326,29.71345447198797",
       "type": "park",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "103",
@@ -10419,7 +10419,7 @@
       "是否收费（是/否）": "否",
       "lnglat": "106.48135879087542,29.741469725068704",
       "type": "park",
-      "isCollection": false
+      "isCollection": true
     }
   ],
   "劳动者港湾": [
@@ -10482,7 +10482,7 @@
       "名称": "将军路劳动者港湾",
       "开放时间": "9:00-18:00",
       "地址": "将军路280号",
-      "lnglat": "106.39570707553742,29.80536901122634",
+      "lnglat": "106.41057,29.804162",
       "type": "labourer",
       "isCollection": false
     },
@@ -10518,7 +10518,7 @@
       "名称": "缙水楼台劳动者港湾",
       "开放时间": "9:00-18:00",
       "地址": "缙水楼台32号公厕旁",
-      "lnglat": "106.39570707553742,29.80536901122634",
+      "lnglat": "106.400126,29.805133",
       "type": "labourer",
       "isCollection": false
     },
@@ -10527,7 +10527,7 @@
       "名称": "三零八劳动者港湾",
       "开放时间": "9:00-18:00",
       "地址": "三零八34号公厕旁",
-      "lnglat": "106.39570707553742,29.80536901122634",
+      "lnglat": "106.407942,29.810539",
       "type": "labourer",
       "isCollection": false
     },
@@ -10545,9 +10545,9 @@
       "名称": "碚峡路劳动者港湾",
       "开放时间": "9:00-18:00",
       "地址": "碚峡路102号附8号附9号",
-      "lnglat": "106.39570707553742,29.80536901122634",
+      "lnglat": "106.443786,29.826971",
       "type": "labourer",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "15",
@@ -10574,14 +10574,14 @@
       "地址": "粮食路74号公厕楼下",
       "lnglat": "106.446584,29.825752",
       "type": "labourer",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "18",
       "名称": "富民小区劳动者港湾",
       "开放时间": "9:00-18:00",
       "地址": "22队进口42号公厕楼下",
-      "lnglat": "106.39570707553742,29.80536901122634",
+      "lnglat": "106.438049,29.81917",
       "type": "labourer",
       "isCollection": false
     },
@@ -10599,9 +10599,9 @@
       "名称": "青年园劳动者港湾",
       "开放时间": "9:00-18:00",
       "地址": "下半城青年园93号公厕旁",
-      "lnglat": "106.39570707553742,29.80536901122634",
+      "lnglat": "106.440806,29.829455",
       "type": "labourer",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "21",
@@ -10619,16 +10619,16 @@
       "地址": "环城路52号公厕旁",
       "lnglat": "108.02084222735594,30.29886005570702",
       "type": "labourer",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "23",
       "名称": "职教中心劳动者港湾",
       "开放时间": "9:00-18:00",
       "地址": "职教中心73号公厕旁",
-      "lnglat": "106.39570707553742,29.80536901122634",
+      "lnglat": "106.422372,29.829513",
       "type": "labourer",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "24",
@@ -10653,9 +10653,9 @@
       "名称": "朝阳东路劳动者港湾",
       "开放时间": "9:00-18:00",
       "地址": "北碚宾馆47号公厕旁",
-      "lnglat": "106.39570707553742,29.80536901122634",
+      "lnglat": "106.445023,29.828496",
       "type": "labourer",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "27",
@@ -10716,9 +10716,9 @@
       "名称": "天生丽街劳动者港湾",
       "开放时间": "9:00-18:00",
       "地址": "天生丽街公厕港湾",
-      "lnglat": "106.39570707553742,29.80536901122634",
+      "lnglat": "106.423366,29.814184",
       "type": "labourer",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "序号": "34",
@@ -10761,7 +10761,7 @@
       "详细地址": "双柏路北碚区信访办右侧",
       "lnglat": "106.44125054831724,29.823461732325807",
       "type": "footbridge",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "编号": "5",
@@ -10793,7 +10793,7 @@
       "详细地址": "陵峡路兼善中学外",
       "lnglat": "106.38780339449335,29.787072303947628",
       "type": "footbridge",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "编号": "9",
@@ -10857,7 +10857,7 @@
       "编号": "6",
       "name": "西师附中人行地通",
       "详细地址": "北师附中大门入口",
-      "lnglat": "106.39570707553742,29.80536901122634",
+      "lnglat": "106.429324,29.832667",
       "type": "underpress",
       "isCollection": false
     },
@@ -10883,7 +10883,7 @@
       "详细地址": "一师大门前",
       "lnglat": "106.43500375430057,29.812087385249104",
       "type": "underpress",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "编号": "10",
@@ -10891,13 +10891,13 @@
       "详细地址": "龙凤桥小学前",
       "lnglat": "106.42884104776834,29.82146276356489",
       "type": "underpress",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "编号": "11",
       "name": "西师大门人行地通",
       "详细地址": "西南大学1号门",
-      "lnglat": "106.39570707553742,29.80536901122634",
+      "lnglat": "106.428936,29.821473",
       "type": "underpress",
       "isCollection": false
     },
@@ -10907,7 +10907,7 @@
       "备注": "3个",
       "lnglat": "106.45935496183499,29.728387001933566",
       "type": "underpress",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "编号": "13",
@@ -10920,7 +10920,7 @@
     {
       "编号": "14",
       "name": "同康路人行地通",
-      "lnglat": "106.39570707553742,29.80536901122634",
+      "lnglat": "106.480286,29.718113",
       "type": "underpress",
       "isCollection": false
     }
@@ -10996,7 +10996,7 @@
       "详细地址": "中山路北碚轻轨站旁",
       "lnglat": "106.40229013688136,29.802007197092806",
       "type": "drinkingwater",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "编号": "10",
@@ -11044,7 +11044,7 @@
       "详细地址": "北碚区天生丽街143号",
       "lnglat": "106.42314301816738,29.814906728598384",
       "type": "drinkingwater",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "编号": "16",
@@ -11076,7 +11076,7 @@
       "详细地址": "奔月路70号市政设施处门卫亭",
       "lnglat": "106.434945,29.8195",
       "type": "drinkingwater",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "编号": "20",
@@ -11085,7 +11085,7 @@
       "备注": "21.5.12城北健身梯城北高速出口搬来",
       "lnglat": "106.447556,29.825619",
       "type": "drinkingwater",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "编号": "21",
@@ -11101,7 +11101,7 @@
       "详细地址": "双柏路与双柏支路交叉路口",
       "lnglat": "106.43458420336114,29.813749465718715",
       "type": "drinkingwater",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "编号": "23",
@@ -11109,7 +11109,7 @@
       "详细地址": "北碚区广州路14号",
       "lnglat": "106.42153569086648,29.82928488994287",
       "type": "drinkingwater",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "编号": "24",
@@ -11121,17 +11121,17 @@
     },
     {
       "编号": "25",
-      "name": "龙凤社区篮球场外",
+      "name": "龙凤社区篮球场外（科华雅苑）",
       "详细地址": "龙凤大道龙凤二村129号",
       "lnglat": "106.43439957101704,29.809388938974873",
       "type": "drinkingwater",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "编号": "26",
       "name": "龙凤菜市场广场",
       "详细地址": "重庆市北碚区龙凤三村291号附7号",
-      "lnglat": "106.40770905915247,29.819027708624876",
+      "lnglat": "106.43549,29.813172",
       "type": "drinkingwater",
       "isCollection": false
     },
@@ -11141,7 +11141,7 @@
       "详细地址": "冯时行路与康宁路交汇处",
       "lnglat": "106.401042,29.791579",
       "type": "drinkingwater",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "编号": "28",
@@ -11149,7 +11149,7 @@
       "详细地址": "冯时行路与康宁路交汇处",
       "lnglat": "106.401073,29.792259",
       "type": "drinkingwater",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "编号": "29",
@@ -11157,7 +11157,7 @@
       "详细地址": "冯时行路与康宁路交汇处",
       "lnglat": "106.400466,29.793131",
       "type": "drinkingwater",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "编号": "30",
@@ -11165,7 +11165,7 @@
       "详细地址": "冯时行路与康宁路交汇处",
       "lnglat": "106.400277,29.793035",
       "type": "drinkingwater",
-      "isCollection": false
+      "isCollection": true
     },
     {
       "编号": "31",

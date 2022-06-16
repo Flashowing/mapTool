@@ -161,13 +161,13 @@ export default {
         infoContent: {}
       },
       checkList: {
-        wc: [],
-        park: [],
-        parking: [],
-        drinkingwater: [],
-        labourer: [],
-        footbridge: [],
-        underpress: []
+        wc: ['未采集'],
+        park: ['未采集'],
+        parking: ['未采集'],
+        drinkingwater: ['未采集'],
+        labourer: ['未采集'],
+        footbridge: ['未采集'],
+        underpress: ['未采集']
       },
       formatted_addresses: '推荐地址',
       address: '地址',
@@ -233,7 +233,7 @@ export default {
       selectionIndicator: true, // 取消点击有绿框
       shouldAnimate: true, // 允许动画
       sceneModePicker: true, // 是否显示3D/2D选择器
-      navigationInstructionsInitiallyVisible: false,
+      navigationInstructionsInitiallyVisible: false
       // navigation: false,
       // scene3DOnly: true // 如果设置为true，则所有几何图形以3D模式绘制以节约GPU资源（这个设置未true切换3d/2d的组件不会显示出来）
       // terrainProvider: Cesium.createWorldTerrain(),
@@ -431,7 +431,7 @@ export default {
             }
             let gcj02towgs = gcj02towgs84(cords[0], cords[1])
             let pointEntity = dataCluster.entities.add({
-              show: false,
+              show: !feature.isCollection,
               name: feature['name'],
               isCollection: feature.isCollection,
               position: Cesium.Cartesian3.fromDegrees(gcj02towgs[0], gcj02towgs[1]),
