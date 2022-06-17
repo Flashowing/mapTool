@@ -233,13 +233,13 @@ export default {
       selectionIndicator: true, // 取消点击有绿框
       shouldAnimate: true, // 允许动画
       sceneModePicker: true, // 是否显示3D/2D选择器
-      navigationInstructionsInitiallyVisible: false
+      navigationInstructionsInitiallyVisible: false,
       // navigation: false,
       // scene3DOnly: true // 如果设置为true，则所有几何图形以3D模式绘制以节约GPU资源（这个设置未true切换3d/2d的组件不会显示出来）
       // terrainProvider: Cesium.createWorldTerrain(),
-      // imageryProvider: new Cesium.TileMapServiceImageryProvider({
-      //   url: 'https://360.fupeijun.com/Cesium-1.85/Build/Cesium/Assets/Textures/NaturalEarthII/'
-      // })
+      imageryProvider: new Cesium.TileMapServiceImageryProvider({
+        url: 'https://360.fupeijun.com/Cesium-1.85/Build/Cesium/Assets/Textures/NaturalEarthII/'
+      })
     })
     window._viewer = viewer
     viewer.sceneModePicker.viewModel.duration = 0.0
@@ -536,6 +536,7 @@ export default {
       }
     })
 
+    console.log(_this.datas)
     function createDescription(feature) {
       let html = `<div><table>`
       for (const featureKey in feature) {
