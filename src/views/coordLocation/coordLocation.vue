@@ -2,7 +2,7 @@
   <div id='cesiumContainer'>
     <div class='sideBtns'>
       <div>
-        <van-button round is-link @click='showPopup'>图层</van-button>
+<!--        <van-button round is-link @click='showPopup'>图层</van-button>-->
         <div>
           <van-popup v-model='butsShow' position='bottom' round get-container='body' :style='{height: "35%"}'>
             <div class='popContent'>
@@ -91,29 +91,29 @@
         <van-button round :type='btnStatus' @click='switchRoadStreet'>街道</van-button>
       </div>
     </div>
-    <div class='buts'>
-      <div>公厕：<span
-        style='display: inline-block;width: 10px;height: 10px;background-color: #ff0000;border-radius: 15px;'></span>
-      </div>
-      <div>公园：<span
-        style='display: inline-block;width: 10px;height: 10px;background-color: #ffca00;border-radius: 15px;'></span>
-      </div>
-      <div>停车场：<span
-        style='display: inline-block;width: 10px;height: 10px;background-color: #87cefa;border-radius: 15px;'></span>
-      </div>
-      <div>直饮水点：<span
-        style='display: inline-block;width: 10px;height: 10px;background-color: #e0ffff;border-radius: 15px;'></span>
-      </div>
-      <div>劳动者港湾：<span
-        style='display: inline-block;width: 10px;height: 10px;background-color: #5adc36;border-radius: 15px;'></span>
-      </div>
-      <div>人行天桥：<span
-        style='display: inline-block;width: 10px;height: 10px;background-color: #ffb6c1;border-radius: 15px;'></span>
-      </div>
-      <div>地下通道：<span
-        style='display: inline-block;width: 10px;height: 10px;background-color: #0051ff;border-radius: 15px;'></span>
-      </div>
-    </div>
+<!--    <div class='buts'>-->
+<!--      <div>公厕：<span-->
+<!--        style='display: inline-block;width: 10px;height: 10px;background-color: #ff0000;border-radius: 15px;'></span>-->
+<!--      </div>-->
+<!--      <div>公园：<span-->
+<!--        style='display: inline-block;width: 10px;height: 10px;background-color: #ffca00;border-radius: 15px;'></span>-->
+<!--      </div>-->
+<!--      <div>停车场：<span-->
+<!--        style='display: inline-block;width: 10px;height: 10px;background-color: #87cefa;border-radius: 15px;'></span>-->
+<!--      </div>-->
+<!--      <div>直饮水点：<span-->
+<!--        style='display: inline-block;width: 10px;height: 10px;background-color: #e0ffff;border-radius: 15px;'></span>-->
+<!--      </div>-->
+<!--      <div>劳动者港湾：<span-->
+<!--        style='display: inline-block;width: 10px;height: 10px;background-color: #5adc36;border-radius: 15px;'></span>-->
+<!--      </div>-->
+<!--      <div>人行天桥：<span-->
+<!--        style='display: inline-block;width: 10px;height: 10px;background-color: #ffb6c1;border-radius: 15px;'></span>-->
+<!--      </div>-->
+<!--      <div>地下通道：<span-->
+<!--        style='display: inline-block;width: 10px;height: 10px;background-color: #0051ff;border-radius: 15px;'></span>-->
+<!--      </div>-->
+<!--    </div>-->
     <div class='tools'>
       <div class='myLocation'>
         <!--        <span class='normal'></span>-->
@@ -415,128 +415,127 @@ export default {
     let footbridge = Cesium.Color.LIGHTPINK
     let underpress = Cesium.Color.BLUE
 
-    fetch('./data/cityinfo_eight_parts.json').then(response => response.json()).then(data => {
-      for (const dataKey in data) {
-        let dataCluster = new Cesium.CustomDataSource(dataKey)
-        data[dataKey].forEach(feature => {
-          if (feature['lnglat']) {
-            let cords = feature['lnglat'].split(',').map(item => {
-              let coord = parseFloat(item.trim())
-              // console.log(coord)
-              return coord
-            })
-            if (cords && cords.length != 2) {
-              console.log(feature['name'])
-              return
-            }
-            let gcj02towgs = gcj02towgs84(cords[0], cords[1])
-            let pointEntity = dataCluster.entities.add({
-              show: !feature.isCollection,
-              name: feature['name'],
-              isCollection: feature.isCollection,
-              position: Cesium.Cartesian3.fromDegrees(gcj02towgs[0], gcj02towgs[1]),
-              description: createDescription(feature),
-              // label: {
-              //   text: feature['name'],
-              //   font: '14pt sans-serif', // 字体样式
-              //   pixelOffset: new Cesium.Cartesian2(0, -20),
-              //   heightReference: Cesium.HeightReference.CLAMP_TO_GROUND, //	一个属性，指定高度相对于什么
-              //   horizontalOrigin: Cesium.HorizontalOrigin.CENTER, // 水平原点
-              //   verticalOrigin: Cesium.VerticalOrigin.BASELINE, // 垂直原点
-              //   fillColor: Cesium.Color.fromCssColorString(feature.isCollection ? '#e1b925' : '#FFF'), // 指定填充的属性Color
-              //   backgroundPadding: new Cesium.Cartesian2(8, 4), // Cartesian2以像素为单位指定水平和垂直背景填充的属性
-              //   disableDepthTestDistance: Number.POSITIVE_INFINITY // 元素在正上方
-              // },
-              // billboard: {
-              //   width: 20,
-              //   height: 20,
-              //   image: eval(feature.type),
-              //   eyeOffset: new Cesium.ConstantProperty(new Cesium.Cartesian3(0, 0, 0)),
-              //   heightReference: Cesium.HeightReference.CLAMP_TO_GROUND, //绝对贴地
-              //   clampToGround: true,
-              //   disableDepthTestDistance: Number.POSITIVE_INFINITY //元素在正上方
-              // },
-              point: {
-                show: true,
-                pixelSize: 15,
-                color: eval(feature.type)
-              },
-              customProp: feature
-            })
-            try {
-              _this.datas[feature.type].push(pointEntity)
-            } catch (e) {
-              console.error(e)
-              console.log(feature)
-            }
-          }
-          // let coordinates = feature.geometry.coordinates[0];
-          // let c = coordinates.map(item => {
-          //   return Cesium.Cartesian3.fromDegrees(item[0], item[1], 125);
-          // });
-        })
-        let dataSourcePromise = viewer.dataSources.add(dataCluster)
-        dataSourcePromise.then(function(dataSource) {
-          let pixelRange = 15 // 代码中pixelRange是聚合距离，也就是小于这个距离就会被聚合
-          let minimumClusterSize = 3 // 是每个聚合点的最小聚合个数，这个值最好是设置为2，因为两个图标也可能叠压
-          let enabled = false
+    // fetch('./data/cityinfo_eight_parts.json').then(response => response.json()).then(data => {
+    //   for (const dataKey in data) {
+    //     let dataCluster = new Cesium.CustomDataSource(dataKey)
+    //     data[dataKey].forEach(feature => {
+    //       if (feature['lnglat']) {
+    //         let cords = feature['lnglat'].split(',').map(item => {
+    //           let coord = parseFloat(item.trim())
+    //           // console.log(coord)
+    //           return coord
+    //         })
+    //         if (cords && cords.length != 2) {
+    //           console.log(feature['name'])
+    //           return
+    //         }
+    //         let gcj02towgs = gcj02towgs84(cords[0], cords[1])
+    //         let pointEntity = dataCluster.entities.add({
+    //           show: !feature.isCollection,
+    //           name: feature['name'],
+    //           isCollection: feature.isCollection,
+    //           position: Cesium.Cartesian3.fromDegrees(gcj02towgs[0], gcj02towgs[1]),
+    //           description: createDescription(feature),
+    //           // label: {
+    //           //   text: feature['name'],
+    //           //   font: '14pt sans-serif', // 字体样式
+    //           //   pixelOffset: new Cesium.Cartesian2(0, -20),
+    //           //   heightReference: Cesium.HeightReference.CLAMP_TO_GROUND, //	一个属性，指定高度相对于什么
+    //           //   horizontalOrigin: Cesium.HorizontalOrigin.CENTER, // 水平原点
+    //           //   verticalOrigin: Cesium.VerticalOrigin.BASELINE, // 垂直原点
+    //           //   fillColor: Cesium.Color.fromCssColorString(feature.isCollection ? '#e1b925' : '#FFF'), // 指定填充的属性Color
+    //           //   backgroundPadding: new Cesium.Cartesian2(8, 4), // Cartesian2以像素为单位指定水平和垂直背景填充的属性
+    //           //   disableDepthTestDistance: Number.POSITIVE_INFINITY // 元素在正上方
+    //           // },
+    //           // billboard: {
+    //           //   width: 20,
+    //           //   height: 20,
+    //           //   image: eval(feature.type),
+    //           //   eyeOffset: new Cesium.ConstantProperty(new Cesium.Cartesian3(0, 0, 0)),
+    //           //   heightReference: Cesium.HeightReference.CLAMP_TO_GROUND, //绝对贴地
+    //           //   clampToGround: true,
+    //           //   disableDepthTestDistance: Number.POSITIVE_INFINITY //元素在正上方
+    //           // },
+    //           point: {
+    //             show: true,
+    //             pixelSize: 15,
+    //             color: eval(feature.type)
+    //           },
+    //           customProp: feature
+    //         })
+    //         try {
+    //           _this.datas[feature.type].push(pointEntity)
+    //         } catch (e) {
+    //           console.error(e)
+    //           console.log(feature)
+    //         }
+    //       }
+    //       // let coordinates = feature.geometry.coordinates[0];
+    //       // let c = coordinates.map(item => {
+    //       //   return Cesium.Cartesian3.fromDegrees(item[0], item[1], 125);
+    //       // });
+    //     })
+    //     let dataSourcePromise = viewer.dataSources.add(dataCluster)
+    //     dataSourcePromise.then(function(dataSource) {
+    //       let pixelRange = 15 // 代码中pixelRange是聚合距离，也就是小于这个距离就会被聚合
+    //       let minimumClusterSize = 3 // 是每个聚合点的最小聚合个数，这个值最好是设置为2，因为两个图标也可能叠压
+    //       let enabled = false
+    //
+    //       dataSource.clustering.enabled = enabled
+    //       dataSource.clustering.pixelRange = pixelRange
+    //       dataSource.clustering.minimumClusterSize = minimumClusterSize
+    //
+    //       let removeListener
+    //
+    //       let pinBuilder = new Cesium.PinBuilder()
+    //       let pin50 = pinBuilder.fromText('50+', Cesium.Color.RED, 48).toDataURL()
+    //       let pin40 = pinBuilder.fromText('40+', Cesium.Color.ORANGE, 48).toDataURL()
+    //       let pin30 = pinBuilder.fromText('30+', Cesium.Color.YELLOW, 48).toDataURL()
+    //       let pin20 = pinBuilder.fromText('20+', Cesium.Color.GREEN, 48).toDataURL()
+    //       let pin10 = pinBuilder.fromText('10+', Cesium.Color.BLUE, 48).toDataURL()
+    //       let singleDigitPins = new Array(8)
+    //       for (let i = 0; i < singleDigitPins.length; ++i) {
+    //         singleDigitPins[i] = pinBuilder.fromText('' + (i + 2), Cesium.Color.VIOLET, 48).toDataURL()
+    //       }
+    //
+    //       function customStyle() {
+    //         if (Cesium.defined(removeListener)) {
+    //           removeListener()
+    //           removeListener = undefined
+    //         } else {
+    //           removeListener = dataSource.clustering.clusterEvent.addEventListener(function(clusteredEntities, cluster) {
+    //             cluster.label.show = false
+    //             cluster.billboard.show = true
+    //             cluster.billboard.id = cluster.label.id
+    //             cluster.billboard.verticalOrigin = Cesium.VerticalOrigin.BOTTOM
+    //             cluster.billboard.heightReference = Cesium.HeightReference.CLAMP_TO_GROUND //绝对贴地
+    //             // cluster.billboard.disableDepthTestDistance = Number.POSITIVE_INFINITY; //元素在正上方
+    //             if (clusteredEntities.length >= 50) {
+    //               cluster.billboard.image = pin50
+    //             } else if (clusteredEntities.length >= 40) {
+    //               cluster.billboard.image = pin40
+    //             } else if (clusteredEntities.length >= 30) {
+    //               cluster.billboard.image = pin30
+    //             } else if (clusteredEntities.length >= 20) {
+    //               cluster.billboard.image = pin20
+    //             } else if (clusteredEntities.length >= 10) {
+    //               cluster.billboard.image = pin10
+    //             } else {
+    //               cluster.billboard.image = singleDigitPins[clusteredEntities.length - 2]
+    //             }
+    //           })
+    //         }
+    //         // force a re-cluster with the new styling
+    //         let pixelRange = dataSource.clustering.pixelRange
+    //         dataSource.clustering.pixelRange = 0
+    //         dataSource.clustering.pixelRange = pixelRange
+    //       }
+    //
+    //       customStyle()
+    //     })
+    //   }
+    // })
 
-          dataSource.clustering.enabled = enabled
-          dataSource.clustering.pixelRange = pixelRange
-          dataSource.clustering.minimumClusterSize = minimumClusterSize
-
-          let removeListener
-
-          let pinBuilder = new Cesium.PinBuilder()
-          let pin50 = pinBuilder.fromText('50+', Cesium.Color.RED, 48).toDataURL()
-          let pin40 = pinBuilder.fromText('40+', Cesium.Color.ORANGE, 48).toDataURL()
-          let pin30 = pinBuilder.fromText('30+', Cesium.Color.YELLOW, 48).toDataURL()
-          let pin20 = pinBuilder.fromText('20+', Cesium.Color.GREEN, 48).toDataURL()
-          let pin10 = pinBuilder.fromText('10+', Cesium.Color.BLUE, 48).toDataURL()
-          let singleDigitPins = new Array(8)
-          for (let i = 0; i < singleDigitPins.length; ++i) {
-            singleDigitPins[i] = pinBuilder.fromText('' + (i + 2), Cesium.Color.VIOLET, 48).toDataURL()
-          }
-
-          function customStyle() {
-            if (Cesium.defined(removeListener)) {
-              removeListener()
-              removeListener = undefined
-            } else {
-              removeListener = dataSource.clustering.clusterEvent.addEventListener(function(clusteredEntities, cluster) {
-                cluster.label.show = false
-                cluster.billboard.show = true
-                cluster.billboard.id = cluster.label.id
-                cluster.billboard.verticalOrigin = Cesium.VerticalOrigin.BOTTOM
-                cluster.billboard.heightReference = Cesium.HeightReference.CLAMP_TO_GROUND //绝对贴地
-                // cluster.billboard.disableDepthTestDistance = Number.POSITIVE_INFINITY; //元素在正上方
-                if (clusteredEntities.length >= 50) {
-                  cluster.billboard.image = pin50
-                } else if (clusteredEntities.length >= 40) {
-                  cluster.billboard.image = pin40
-                } else if (clusteredEntities.length >= 30) {
-                  cluster.billboard.image = pin30
-                } else if (clusteredEntities.length >= 20) {
-                  cluster.billboard.image = pin20
-                } else if (clusteredEntities.length >= 10) {
-                  cluster.billboard.image = pin10
-                } else {
-                  cluster.billboard.image = singleDigitPins[clusteredEntities.length - 2]
-                }
-              })
-            }
-            // force a re-cluster with the new styling
-            let pixelRange = dataSource.clustering.pixelRange
-            dataSource.clustering.pixelRange = 0
-            dataSource.clustering.pixelRange = pixelRange
-          }
-
-          customStyle()
-        })
-      }
-    })
-
-    console.log(_this.datas)
     function createDescription(feature) {
       let html = `<div><table>`
       for (const featureKey in feature) {
