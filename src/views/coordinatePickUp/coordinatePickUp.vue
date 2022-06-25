@@ -67,6 +67,7 @@
 import { Viewer } from 'cesium'
 import { wgs84togcj02, gcj02tobd09 } from '@/utils/transformCoordinate'
 import { jsonp } from 'vue-jsonp'
+import { MyGeocoder } from '../../utils/MyGeocoder'
 
 export default {
   name: 'coordinatePickUp',
@@ -96,7 +97,7 @@ export default {
       homeButton: true, // 主页按钮
       baseLayerPicker: false, // 是否显示图层选择控件
       navigationHelpButton: false, // 帮助信息按钮
-      geocoder: true, // 是否显示地名查找控件
+      geocoder: new MyGeocoder(), // 是否显示地名查找控件
       infoBox: true, // 是否显示点击要素之后显示的信息
       fullscreenButton: false, // 是否显示全屏按钮
       timeline: false, // 是否显示时间线控件
