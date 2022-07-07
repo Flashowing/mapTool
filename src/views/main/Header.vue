@@ -22,7 +22,7 @@
           <el-menu-item index='2-1'><a href='http://183.230.114.154:9010/map/spatialGeographicDatabase/' target='_blank'>空间地理数据库</a>
           </el-menu-item>
         </el-submenu>
-        <el-menu-item index='3' disabled class='hidden-md-and-down'>文档</el-menu-item>
+        <el-menu-item index='3' class='hidden-md-and-down'><a href='./doc/index.html' target='_blank'>文档</a></el-menu-item>
         <el-submenu index='2'>
           <template slot='title'>工具</template>
           <el-menu-item index='2-1'><router-link to='/countScore'>业绩指标分值计算</router-link></el-menu-item>

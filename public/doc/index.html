@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang='zh'>
+<head>
+  <meta charset='UTF-8'>
+  <title>文档</title>
+  <script src='http://183.230.114.154:9010/map/staticResources/js/vue/vue.js'></script>
+  <!-- element -->
+  <!-- 引入样式 -->
+  <link rel='stylesheet' href='https://unpkg.com/element-ui/lib/theme-chalk/index.css'>
+  <!-- 引入组件库 -->
+  <script src='https://unpkg.com/element-ui/lib/index.js'></script>
+  <style>
+      .el-header, .el-footer {
+          background-color: #B3C0D1;
+          color: #333;
+          text-align: center;
+          line-height: 60px;
+      }
+
+      .el-main {
+          background-color: #E9EEF3;
+          color: #333;
+      }
+  </style>
+</head>
+<body>
+<div id='app'>
+  <el-container>
+    <el-header>文档</el-header>
+    <el-main>
+      <el-row :gutter="20">
+        <el-col :span="12">
+          <h3>GeoServer</h3>
+          <span><el-link href='http://183.230.114.154:9010/map/staticResources/document/geoserver-2.21.0-htmldoc/geoserver-2.21.0/api/index.html' :underline="false">HTML - api</el-link></span>
+          <span><el-link href='http://183.230.114.154:9010/map/staticResources/document/geoserver-2.21.0-htmldoc/geoserver-2.21.0/developer/index.html' :underline="false">HTML - developer</el-link></span>
+          &nbsp;&nbsp;&nbsp;
+          <span><el-link href='http://183.230.114.154:9010/map/staticResources/document/geoserver-2.21.0-javadoc/index.html' :underline="false">JavaDoc</el-link></span>
+        </el-col>
+        <el-col :span="12">
+          <h3>Cesium</h3>
+        </el-col>
+      </el-row>
+    </el-main>
+  </el-container>
+</div>
+<script>
+  new Vue({
+    el: '#app'
+  })
+</script>
+</body>
+</html>
